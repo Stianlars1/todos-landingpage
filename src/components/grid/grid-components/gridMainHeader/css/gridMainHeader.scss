@@ -1,0 +1,30 @@
+.grid-main-header {
+  padding: 0 0 2rem;
+
+  &__title {
+    font-size: 3.75rem;
+    color: hsl(var(--primary));
+
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    color: hsl(var(--muted-foreground));
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .grid-main-header {
+    &__title {
+      color: hsl(var(--primary));
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: hsl(var(--background));
+  border-right: 1px solid hsl(var(--muted));
+  position: fixed;
+  top: calc(var(--nav-height));
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s, transform 0.3s ease;
+}
+.sidebar .close-button {
+  display: none;
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
+.sidebar .title {
+  height: var(--nav-height);
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1.3px solid hsl(var(--muted));
+  min-width: 100%;
+  font-size: 0.875rem;
+  display: none;
+}
+.sidebar__getting-started {
+  margin-top: 1.5rem;
+  color: hsl(var(--foreground)/0.9);
+}
+.sidebar nav {
+  margin-top: 1rem;
+  width: 100%;
+}
+.sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-100%);
+  }
+  [data-nav-open=true] .sidebar {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+    z-index: 100;
+    position: fixed;
+    box-shadow: hsla(0, 0%, 0%, 0.1) 0 0 0.5rem 0.25rem;
+    top: 0;
+  }
+  [data-nav-open=true] .sidebar .close-button {
+    position: absolute;
+    top: calc((var(--nav-height) - 20px - 1.3rem) / 2);
+    right: 1rem;
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0s, visibility 0.5s;
+  }
+  [data-nav-open=true] .sidebar .title {
+    display: flex;
+  }
+  [data-nav-open=true] .sidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--background));
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 769px) {
+  .sidebar {
+    padding-left: max(32px, (100% - (var(--max-width) - 64px)) / 2);
+    width: calc((100% - (var(--max-width) - 64px)) / 2 + var(--sidebar-width) - 32px);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=gridSidebar.css.map */

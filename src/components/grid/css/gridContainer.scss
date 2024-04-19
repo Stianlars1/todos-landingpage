@@ -1,0 +1,53 @@
+.grid-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) auto; // Auto for the rest of the space for the main content
+  grid-template-rows: var(--nav-height) auto; // Explicit row height for the navbar, auto for the main and sidebar
+  grid-template-areas: "navbar navbar" // Navbar spans the entire width
+    "sidebar main"; // Sidebar and main content are side by side
+  z-index: 1;
+  overflow: visible;
+
+  // Navbar setup
+  &__navbar {
+    grid-area: navbar; // Assigning to the navbar area
+    height: var(--nav-height); // Setting the height
+    z-index: 1;
+  }
+
+  // Sidebar setup
+  &__sidebar {
+    grid-area: sidebar; // Assigning to the sidebar area
+    // width: var(--sidebar-width); // Setting the width
+    // width: calc((100% - (var(--max-width) - 64px)) / 2 + var(--sidebar-width) - 32px);
+    padding: var(--sidebar-padding);
+    min-width: var(--sidebar-width);
+    z-index: 10;
+  }
+
+  // Main content setup
+  &__main {
+    grid-area: main; // Assigning to the main area
+    flex: 1;
+    max-width: var(--main--content-max-width); // Setting the width
+    padding: var(--main-padding);
+    z-index: 1;
+    overflow-x: hidden;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto; // Auto for the rest of the space for the main content
+    grid-template-rows: var(--nav-height) auto; // Explicit row height for the navbar, auto for the main and sidebar
+    grid-template-areas: "navbar" // Navbar spans the entire width
+      "main"; // Sidebar and main content are side by side
+
+    // Main content setup
+    &__main {
+      width: 100%; // Full width for the main content
+    }
+  }
+}
