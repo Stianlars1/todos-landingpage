@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 export const socialMedia = {
   GITHUB: {
     name: "GitHub",
-    url: "https://github.com/stianlars1/react-code-preview",
+    url: "https://github.com/stianlars1/todos-landingpage",
     Icon: FaGithub,
   },
 };

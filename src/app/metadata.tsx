@@ -1,12 +1,9 @@
 import { BASE_URL, SUB_URL } from "@/utils/constants";
 import { Metadata } from "next";
-// title: "Strekkode generator",
-// description:
-//   "Generer og lag en gratis strekkode for din bedrift eller produkt.",
 export const mainPageMeta: Metadata = {
-  title: "TodoBuddy",
+  title: "TaskBuddy - Create and structure your daily tasks",
   description:
-    "This is the website for creating and structuring your daily tasks.",
+    "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",
   keywords: [
     "todo",
     "create todo",
@@ -14,6 +11,10 @@ export const mainPageMeta: Metadata = {
     "todo list",
     "todo app",
     "todo buddy",
+    "task buddy",
+    "tasks",
+    "create tasks online",
+    "online task",
   ],
   creator: "Stian Larsen",
   publisher: "Stian Larsen",
@@ -22,36 +23,36 @@ export const mainPageMeta: Metadata = {
   openGraph: {
     type: "website",
     url: BASE_URL,
-    title: "TodoBuddy",
+    title: "TaskBuddy",
     description:
-      "This is the website for creating and structuring your daily tasks.",
+      "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",
     images: [
       {
         url: `${SUB_URL}/android-chrome-512x512.png`,
         width: 512,
         height: 512,
-        alt: "TodoBuddy logo",
+        alt: "TaskBuddy logo",
       },
       {
         url: `${SUB_URL}/android-chrome-192x192.png`,
         width: 192,
         height: 192,
-        alt: "Todo logo",
+        alt: "TaskBuddy logo",
       },
     ],
-    siteName: "todobuddy.dev",
+    siteName: "TaskBuddy.dev",
   },
   twitter: {
     card: "app",
-    title: "todobuddy.dev",
+    title: "TaskBuddy.dev",
     description:
-      "This is the website for creating and structuring your daily tasks.",
+      "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",
     siteId: "882276408",
     creator: "@Litehode",
     creatorId: "882276408",
     images: {
-      url: "https://stianlarsen.com/og.png",
-      alt: "Strekkode logo",
+      url: `${SUB_URL}/android-chrome-512x512.png`,
+      alt: "TaskBuddy logo",
     },
     app: {
       name: "twitter_app",
