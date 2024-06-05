@@ -10,7 +10,7 @@ html body {
   --footer-height: 135px;
 
   /* == utils == */
-  --max-width: none;
+  --max-width: 1400px;
   --border-radius: 12px;
   --radius: 0.5rem;
   --main-padding: calc(2rem + 4px) 64px;

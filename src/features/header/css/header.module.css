@@ -1,0 +1,182 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.header .tag {
+  margin: 0 auto;
+}
+.header .left {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.header .left .focus {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.header .left .focus h1 {
+  font-size: 3rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  text-wrap: balance;
+}
+.header .left .focus p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 700px;
+  text-wrap: pretty;
+}
+.header .left .cta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.65s 0.15s ease, transform 0.65s 0.15s ease;
+}
+.header .left .cta button {
+  outline: none;
+  cursor: pointer;
+  border: hsl(var(--border));
+  padding: 6px 12px;
+  line-height: 1.75rem;
+  border-radius: 8px;
+}
+.header .left .cta button:first-child {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--white));
+}
+.header .left .cta button:first-child:hover {
+  background-color: hsl(var(--primary)/0.75);
+}
+.header .left .cta button:last-child {
+  border: 1px solid hsl(var(--muted));
+}
+.header .left .cta button:last-child:hover {
+  background-color: hsl(var(--muted));
+}
+.header .left .focusLoaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header .left .ctaLoaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header .right {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+.header .right .image {
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.75s 0.35s ease, transform 0.75s 0.35s ease;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.06), 0 2px 5px rgba(0, 0, 0, 0.06), -2px 0 5px rgba(0, 0, 0, 0.06), 2px 0 5px rgba(0, 0, 0, 0.06);
+}
+.header .right .imageLoaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header .right .imageShimmer {
+  position: absolute;
+  top: 1px;
+  left: -100px; /* Start shimmer offscreen */
+  width: 70px; /* Width of the shimmer */
+  height: 1px; /* Height of the shimmer */
+  background: linear-gradient(to right, transparent, hsl(var(--primary)));
+  opacity: 0;
+  animation: shimmer 4s 1.2s infinite linear forwards;
+}
+@media screen and (prefers-color-scheme = dark) {
+  .header .right .imageShimmer {
+    background: linear-gradient(to right, transparent, hsl(var(--white)));
+  }
+}
+@keyframes shimmer {
+  0% {
+    opacity: 0;
+    left: -100px; /* Start shimmer offscreen */
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    left: 100%;
+  }
+  50.01% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .header {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 64px;
+  }
+  .header .left {
+    align-self: center;
+    max-width: 700px;
+  }
+  .header .left .cta {
+    justify-content: flex-start;
+  }
+  .header .right {
+    align-self: center;
+    min-width: 700px;
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .header .left .focus h1 {
+    max-width: 700px;
+    text-align: center;
+  }
+  .header .right .image {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .header .left .focus h1 {
+    font-size: 2.5rem;
+  }
+  .header .left .focus p {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header .left .focus h1 {
+    font-size: 2.25rem;
+  }
+  .header .left .focus p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=header.module.css.map */

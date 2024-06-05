@@ -1,0 +1,12 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+
+  border-radius: 99999px;
+}

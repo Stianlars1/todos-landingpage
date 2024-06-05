@@ -1,4 +1,4 @@
-import { BASE_URL, SUB_URL } from "@/utils/constants";
+import { SUB_URL } from "@/utils/constants";
 import { Metadata } from "next";
 export const mainPageMeta: Metadata = {
   title: "TaskBuddy - Create and structure your daily tasks",
@@ -18,11 +18,11 @@ export const mainPageMeta: Metadata = {
   ],
   creator: "Stian Larsen",
   publisher: "Stian Larsen",
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SUB_URL),
 
   openGraph: {
     type: "website",
-    url: BASE_URL,
+    url: SUB_URL,
     title: "TaskBuddy",
     description:
       "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",

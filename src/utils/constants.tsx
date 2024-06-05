@@ -5,5 +5,5 @@ export const email = "stian.larsen@mac.com";
 export const phoneNumber = "92689781";
 export const formattedPhoneNumber = "(+47) 926 89 781";
 export const SUB_URL = "https://taskbuddy.dev";
-export const BASE_URL = "https://taskbuddy.dev";
+export const APP_URL = "https://app.taskbuddy.dev/signup";
 export const iconSize = 20;
