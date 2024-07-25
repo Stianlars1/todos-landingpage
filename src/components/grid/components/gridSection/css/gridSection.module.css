@@ -2,6 +2,7 @@
   max-width: calc(var(--max-width) - 300px);
   padding: 6rem 0 6rem;
   margin: 0 auto;
+  overflow-x: visible;
 }
 
 @media screen and (min-width: 1401px) {

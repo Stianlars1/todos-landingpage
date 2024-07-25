@@ -1,21 +1,157 @@
+import { TaskBuddyCheckmark } from "@/assets/taskBuddyCheckmark/taskBuddyCheckmark";
 import { SectionHeader } from "@/components/sectionHeader/sectionHeader";
-import { Tag } from "@/components/ui/tag/tag";
+import { SectionWrapper } from "@/components/sectionWrapper/sectionWrapper";
+import { EasyReveal, RevealProps } from "@/components/ui/reveal/reveal";
+import { Libre_Franklin } from "next/font/google";
+import Image from "next/image";
+import { Benefit, benefitsContentList } from "./content";
+import styles from "./css/benefits.module.css";
+
+const Libre = Libre_Franklin({ subsets: ["latin"] });
+
 export const Benefits = () => {
   const feature = "Key benefits";
-  const title = "Unlock Your Team's Potential with TaskBuddy";
+  const title = "Unlock Your Potential with TaskBuddy";
   const description =
-    "TaskBuddy offers a range of benefits to help you and your team work more efficiently and effectively.";
+    "TaskBuddy offers unique benefits to enhance your productivity and task management experience.";
+  return (
+    <SectionWrapper>
+      <SectionHeader
+        feature={feature}
+        title={title}
+        description={description}
+      />
+
+      <BenefitsContent />
+    </SectionWrapper>
+  );
+};
+
+const BenefitsContent = () => {
+  return (
+    <div className={`${styles.content} ${Libre.className}`}>
+      <ul className={styles.benefitList}>
+        {benefitsContentList.map((benefit: Benefit, index) => (
+          <BenefitItem key={benefit.title} benefit={benefit} index={index} />
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const BenefitItem = ({
+  benefit,
+  index,
+}: {
+  benefit: Benefit;
+  index: number;
+}) => {
+  const customClass = getCustomClass(index);
+
+  const revealProps = getRevealProps(index);
+  const isAnimated = benefit.animated;
+  const showBulletPoints =
+    benefit.bulletPoints && benefit.bulletPoints.length > 0;
+  const Animation = isAnimated && benefit.animation ? benefit.animation : null;
+  const imageSource = !isAnimated && benefit.imgSrc ? benefit.imgSrc : null;
+
   return (
     <>
-      <SectionHeader feature={feature} title={title} description={description}>
-        <Tag
-          backgroundHEX={"#FFC107"}
-          textColorHEX={"#000"}
-          width={"fit-content"}
-        >
-          ⚠ Under construction
-        </Tag>
-      </SectionHeader>
+      <EasyReveal
+        className={`${styles.benefitItem} ${customClass}`}
+        {...revealProps}
+      >
+        <li>
+          <div className={styles.itemHeader}>
+            <h2>{benefit.title}</h2>
+            <p>{benefit.description}</p>
+          </div>
+
+          {showBulletPoints && (
+            <>
+              <ul className={styles.bulletPointsList}>
+                {benefit.bulletPoints?.map((point) => (
+                  <li key={point} className={styles.bulletPoint}>
+                    <TaskBuddyCheckmark />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <div className={styles.itemContent}>
+            {Animation && (
+              <>
+                <div className={styles.animationWrapper}>
+                  {<Animation className={styles.animation} />}
+                </div>
+              </>
+            )}
+
+            {imageSource && (
+              <>
+                <Image
+                  alt={`Benefit item ${benefit.title}`}
+                  src={imageSource}
+                  width={0}
+                  height={0}
+                  sizes="auto"
+                  loading="eager"
+                  priority
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </>
+            )}
+          </div>
+        </li>
+      </EasyReveal>
     </>
   );
+};
+
+const getRevealProps = (index: number): RevealProps => {
+  // props i will use:
+  // type : MotionProps;
+  // where type MotionProps = "down" | "up" | "left" | "right" | "opacity";
+
+  switch (index) {
+    case 0:
+      return { type: "right", reset: true };
+    case 1:
+      return { type: "left", reset: true };
+    case 2:
+      return { type: "up", reset: true };
+    case 3:
+      return { type: "left", reset: true };
+    case 4:
+      return { type: "up", reset: true };
+    case 5:
+      return { type: "left", reset: true };
+    case 6:
+      return { type: "right", reset: true };
+    default:
+      return { type: "left", reset: true };
+  }
+};
+
+const getCustomClass = (index: number) => {
+  switch (index) {
+    case 0:
+      return styles.item0;
+    case 1:
+      return styles.item1;
+    case 2:
+      return styles.item2;
+    case 3:
+      return styles.item3;
+    case 4:
+      return styles.item4;
+    case 5:
+      return styles.item5;
+    case 6:
+      return styles.item6;
+    default:
+      return styles.item0;
+  }
 };

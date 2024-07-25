@@ -1,11 +1,12 @@
 import { GridSection } from "@/components/grid/components/gridSection/gridSection";
 import { GridContainer } from "@/components/grid/components/gridcontainer/gridcontainer";
 import { Benefits } from "@/features/benefits/benefits";
-import { Features } from "@/features/features/features";
+import { CallToAction } from "@/features/callToAction/callToAction";
+import { Demo } from "@/features/demo/demo";
 import { Header } from "@/features/header/header";
-import { Pricing } from "@/features/pricing/pricing";
+import { HowItWorks } from "@/features/howItWorks/howItWorks";
+import { KeyFeaturesContainer } from "@/features/keyFeaturesContainer/keyFeaturesContainer";
 import { Testimonials } from "@/features/testimonials/testimonials";
-import { Why } from "@/features/why/why";
 
 export default function Home() {
   return (
@@ -16,20 +17,31 @@ export default function Home() {
         </GridSection>
 
         <GridSection>
-          <Features />
+          <KeyFeaturesContainer />
         </GridSection>
 
+        <GridSection>
+          <HowItWorks />
+        </GridSection>
         <GridSection>
           <Benefits />
         </GridSection>
 
         <GridSection>
-          <Why />
+          <Demo />
         </GridSection>
 
         <GridSection>
-          <Pricing />
+          <CallToAction />
         </GridSection>
+        {/* 
+        <GridSection>
+          <Why />
+        </GridSection> */}
+
+        {/* <GridSection>
+          <Pricing />
+        </GridSection> */}
 
         <GridSection>
           <Testimonials />

@@ -1,0 +1,224 @@
+.content {
+  width: 100%;
+  max-width: 64rem;
+
+  background-color: transparent;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefitList {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    padding: 20px;
+    background: transparent;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, auto);
+      grid-template-areas:
+        "item0 item0"
+        "item1 item1"
+        "item2 item3"
+        "item4 item5";
+    }
+
+    .benefitItem {
+      color: #ffffff; /* Text color */
+      padding: 40px 25px;
+
+      border-radius: var(--radius);
+      // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      border: 1px solid hsl(var(--border));
+
+      list-style-type: none;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: border 0.15s ease-in-out;
+
+      &:hover {
+        --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+        border: 1.2px solid hsl(var(--border));
+      }
+
+      .itemHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        h2 {
+          font-size: 1.2em;
+          font-weight: 400;
+          margin-bottom: 10px;
+          color: hsl(var(--foreground));
+        }
+
+        p {
+          font-size: 1em;
+          margin-bottom: 20px;
+          font-weight: 200;
+          color: hsl(var(--foreground) / 0.85);
+        }
+      }
+
+      .bulletPointsList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .bulletPoint {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 6px;
+          list-style-type: none;
+          color: hsl(var(--foreground));
+
+          @media screen and (prefers-color-scheme=dark) {
+            svg {
+              fill: white;
+
+              path,
+              rect {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+
+      button {
+        background-color: #4a4a4a;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #5a5a5a;
+        }
+      }
+
+      .itemContent {
+        .animationWrapper {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .animation {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            opacity: 0.95;
+          }
+        }
+      }
+    }
+
+    .item0 {
+      grid-column: 1 / span 4;
+      grid-row: 1 / span 2;
+      background-image: linear-gradient(
+        to left bottom,
+        #2563eb -50%,
+        transparent 70%
+      );
+
+      display: flex;
+      flex-direction: row;
+
+      .itemContent {
+        .animationWrapper {
+          .animation {
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        grid-area: item0;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+      }
+    }
+    .item1 {
+      grid-column: 5 / span 2;
+      grid-row: 1 / span 2;
+      background-image: linear-gradient(
+        to right bottom,
+        #2563eb -50%,
+        transparent 70%
+      );
+
+      @media (max-width: 768px) {
+        grid-area: item1;
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+      }
+    }
+    .item2 {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+
+      background-image: linear-gradient(
+        to left top,
+        #2563eb -50%,
+        transparent 70%
+      );
+
+      @media (max-width: 768px) {
+        grid-area: item2;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+      }
+    }
+    .item3 {
+      grid-column: 4 / span 3;
+      grid-row: 3 / span 1;
+
+      background-image: linear-gradient(115deg, #2563eb -50%, transparent 50%);
+
+      @media (max-width: 768px) {
+        grid-area: item3;
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+      }
+    }
+    .item4 {
+      grid-column: 1 / span 2;
+      grid-row: 4 / span 1;
+      background-image: linear-gradient(115deg, #2563eb -50%, transparent 100%);
+
+      @media (max-width: 768px) {
+        grid-area: item4;
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+      }
+    }
+    .item5 {
+      grid-column: 3 / span 4;
+      grid-row: 4 / span 1;
+
+      background-image: linear-gradient(
+        to bottom left,
+        #2563eb -100%,
+        transparent 70%
+      );
+
+      @media (max-width: 768px) {
+        grid-area: item5;
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+      }
+    }
+  }
+}

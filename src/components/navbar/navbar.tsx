@@ -5,7 +5,7 @@ export const Navbar = () => {
     <div>
       <nav className={styles.navbar}>
         <TaskBuddyLogo className={styles.taskbuddyLogo} />
-        <code>TaskBuddy.dev</code>
+        <code>TaskBuddy</code>
       </nav>
     </div>
   );

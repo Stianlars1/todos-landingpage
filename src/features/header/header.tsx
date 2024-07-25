@@ -1,7 +1,7 @@
 "use client";
 import { Tag } from "@/components/ui/tag/tag";
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
-import { APP_URL } from "@/utils/constants";
+import { APP_URL_SIGNUP } from "@/utils/constants";
 import { Libre_Franklin } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +47,7 @@ export const Header = () => {
           <div
             className={`${styles.cta} ${imageLoaded ? styles.ctaLoaded : ""}`}
           >
-            <Link href={APP_URL}>
+            <Link href={APP_URL_SIGNUP}>
               <button>Get Started</button>
             </Link>
             <button>Learn More</button>
@@ -67,7 +67,7 @@ export const Header = () => {
               alt="TaskBuddy hero image"
               width={0}
               height={0}
-              sizes="auto"
+              sizes="100%"
               style={{ width: "100%", height: "auto" }}
               loading="eager"
               priority

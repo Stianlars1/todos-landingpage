@@ -14,3 +14,113 @@
     z-index: -1;
   }
 }
+
+// the features section inside the gridSection
+.featuresContent {
+  max-width: 64rem;
+  .featuresList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 400px));
+    gap: 3rem;
+
+    .featureItem {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      gap: 0.25rem;
+      position: relative;
+      .featureItemTitle {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        text-wrap: balance;
+        text-align: left;
+        font-weight: 400;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+
+        flex-wrap: wrap;
+
+        .customIcon {
+          color: hsl(var(--foreground));
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .featureItemDescription {
+        font-size: 0.875rem;
+        color: hsl(var(--muted-foreground));
+        text-wrap: pretty;
+        max-width: 100%;
+        min-width: 0;
+      }
+    }
+  }
+}
+
+.concludingMessage {
+  margin-top: 2rem;
+  padding: 3rem 0 3rem;
+  background-color: hsl(var(--muted));
+  position: relative;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  p {
+    color: hsl(var(--muted-foreground));
+    font-size: 1rem;
+    text-align: center;
+    max-width: 660px;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  a {
+    padding: 8px 20px;
+    background-color: hsl(var(--primary));
+    border-radius: 999999999px;
+    color: hsl(var(--white));
+    text-decoration: none;
+    font-size: 0.875rem;
+
+    &:hover {
+      text-decoration: none;
+      background-color: hsl(var(--primary) / 0.75);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000%;
+    right: -1000%;
+    background-color: hsl(var(--muted));
+
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .featuresContent {
+    .featuresList {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .featuresContent {
+    .featuresList {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}/*# sourceMappingURL=sectionWrapper.module.css.map */

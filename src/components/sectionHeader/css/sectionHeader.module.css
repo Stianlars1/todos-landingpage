@@ -13,11 +13,25 @@
   font-weight: 700;
   color: hsl(var(--foreground));
   text-wrap: balance;
+  min-width: 100%;
+  max-width: 100%;
 }
 .sectionHeader .description {
   font-size: 1rem;
   line-height: 1.75rem;
   color: hsl(var(--muted-foreground));
+  min-width: 100%;
   max-width: 700px;
   text-wrap: pretty;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionHeader .title {
+    font-size: 2rem; /* Adjusted size for smaller screens */
+  }
+  .sectionHeader .description {
+    font-size: 0.875rem; /* Adjusted size for smaller screens */
+    line-height: 1.5rem; /* Adjusted line height for smaller screens */
+  }
 }/*# sourceMappingURL=sectionHeader.module.css.map */

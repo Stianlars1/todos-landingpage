@@ -2,11 +2,32 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 64px;
 }
 
 @media screen and (min-width: 1401px) {
   .gridContainer {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gridContainer {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .gridContainer {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .gridContainer {
+    padding: 0 10px;
   }
 }

@@ -24,6 +24,14 @@ html body {
   /* --custom-1: hsl(221 39% 11%); */
   /* --custom-2: #1f2937; */
   --sidebar-bg: 0 0% 100%;
+  --backgroundHEX: #f3f4f6;
+  --backgroundDarkHEX: #020817;
+  --primaryHEX: #2563eb;
+  --primarDarkyHEX: #3b82f6;
+  --mutedHEX: #cfdaf2;
+  --mutedDarkHEX: #1e293b;
+  --mutedForeHEX: #64748b;
+  --mutedForeDarkHEX: #94a3b8;
 
   /* == Theme == */
   /* --background: 0 0% 100%; */
@@ -90,13 +98,17 @@ html {
 
 html,
 body {
-  max-width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
 }
 
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
+  max-width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
