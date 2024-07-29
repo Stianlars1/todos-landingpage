@@ -60,7 +60,8 @@ html body {
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   html body {
     --sidebar-bg: 222.2 84% 4.9%;
     /* == Theme == */

@@ -1,0 +1,66 @@
+.cardStack {
+  display: flex;
+  max-width: 1012px;
+  margin: 0 auto;
+
+  .header {
+    z-index: 1000;
+    h2 {
+      font-size: 5rem;
+      max-width: 400px;
+      margin-bottom: 1rem;
+
+      letter-spacing: -0.05em;
+      line-height: 1;
+      font-weight: 700;
+    }
+  }
+}
+
+.cardsContainer {
+  perspective: 2000px;
+  width: 600px; /* Adjust based on your image size */
+  min-width: 565px;
+  margin: 100px auto; /* Center the card */
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+
+  position: relative;
+  animation: all 0.5s ease-in-out;
+  height: 200px;
+  margin: 9rem 0 0;
+
+  &:hover {
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cardStack {
+    .header {
+      h2 {
+        font-size: 3.75rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .cardStack {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12rem;
+    .header {
+      h2 {
+        font-size: 2.75rem;
+        margin-bottom: 64px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardsContainer {
+    perspective: 3000px;
+  }
+}

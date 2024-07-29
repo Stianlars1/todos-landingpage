@@ -1,7 +1,7 @@
 import { Priority } from "@/types/taskTypes";
 import "./css/tags.css";
 
-type TagsProps =
+export type TagsProps =
   | { priority: Priority; variant: "priority" }
   | { tags: string[]; variant: "tag" };
 export const Tag2 = (props: TagsProps) => {

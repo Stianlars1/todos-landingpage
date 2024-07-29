@@ -64,7 +64,6 @@ export const FastAnimation = ({
   className?: string;
 }) => {
   const newClassname = `${className} lottie-animation"`;
-  console.log("FastAnimation classname", className);
   const defaultLottieOptions = {
     loop: true,
     autoplay: true,
@@ -90,7 +89,6 @@ export const LockAnimation = ({
 }) => {
   const { isDarkmodeActive } = useIsDarkmodeActive();
   const newClassname = `${className} lottie-animation"`;
-  console.log("FastAnimation classname", className);
   const defaultLottieOptions = {
     loop: true,
     autoplay: true,

@@ -1,5 +1,6 @@
 import { SUB_URL } from "@/utils/constants";
 import { Metadata } from "next";
+
 export const mainPageMeta: Metadata = {
   title: "TaskBuddy - Create and structure your daily tasks",
   description:
@@ -82,3 +83,5 @@ export const mainPageMeta: Metadata = {
     },
   },
 };
+
+export const metadata: Metadata = mainPageMeta;

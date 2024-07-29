@@ -20,8 +20,8 @@ export const TaskBuddyCheckmark = () => {
         fill="black"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M1540.72 262.651L665.85 1137.52L457.872 929.541L1386.81 0.605439L1397.92 11.7225C1459.55 88.9986 1507.15 173.78 1540.72 262.651Z"
         fill="black"
       />

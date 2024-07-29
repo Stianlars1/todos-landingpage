@@ -1,11 +1,11 @@
 .column {
   flex: 1;
-  min-width: 100%;
   padding: 1.2rem 1.2rem 2rem;
   list-style-type: none;
   background-color: hsl(var(--card));
 
-  @media screen and (prefers-color-scheme="dark") {
+  @media screen and (prefers-color-scheme: dark),
+    screen and (-webkit-prefers-color-scheme: dark) {
     //background-color: hsl(var(--muted));
   }
   height: fit-content;

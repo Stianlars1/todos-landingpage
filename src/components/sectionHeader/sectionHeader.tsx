@@ -30,10 +30,10 @@ export const SectionHeader = ({
         {!animation && feature && feature.length > 0 && <Tag>{feature}</Tag>}
         {animation ? (
           <>
-            <Reveal reset delay={0.1} type="opacity" duration={1} width="100%">
+            <Reveal reset delay={0.15} type="opacity" duration={1} width="100%">
               <h2 className={`${styles.title} ${Libre.className}`}>{title}</h2>
             </Reveal>
-            <Reveal reset delay={0.15} type="opacity" duration={1} width="100%">
+            <Reveal reset delay={0.2} type="opacity" duration={1} width="100%">
               <p className={`${styles.description} ${Libre.className}`}>
                 {description}
               </p>

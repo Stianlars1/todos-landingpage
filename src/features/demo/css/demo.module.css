@@ -16,7 +16,7 @@
   border: 1px solid hsl(var(--border));
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
 }
-@media screen and (prefers-color-scheme = dark) {
+@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
   .content .playground {
     background-color: #282a36;
     background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjIwIiB3aWR0aD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjAgMjAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxjaXJjbGUgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSIgcj0iMSIvPjxjaXJjbGUgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSIgY3g9IjIwIiBjeT0iMjAiIHI9IjEiLz48Y2lyY2xlIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yNSkiIGN4PSIyMCIgcj0iMSIvPjxjaXJjbGUgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjI1KSIgY3k9IjIwIiByPSIxIi8+PC9zdmc+);

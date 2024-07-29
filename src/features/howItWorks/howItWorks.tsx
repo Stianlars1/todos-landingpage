@@ -55,7 +55,9 @@ const HowItWorksContent = () => {
             <HowItWorksStep
               key={step.title}
               index={index}
-              isMobileSize={isMobileSize}
+              isMobileSize={
+                isMobile ? isMobile : isMobileSize ? isMobileSize : false
+              }
               step={step}
             />
           ))}

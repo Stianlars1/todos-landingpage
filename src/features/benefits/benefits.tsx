@@ -2,13 +2,13 @@ import { TaskBuddyCheckmark } from "@/assets/taskBuddyCheckmark/taskBuddyCheckma
 import { SectionHeader } from "@/components/sectionHeader/sectionHeader";
 import { SectionWrapper } from "@/components/sectionWrapper/sectionWrapper";
 import { EasyReveal, RevealProps } from "@/components/ui/reveal/reveal";
-import { Libre_Franklin } from "next/font/google";
+import { Inter as inter, Libre_Franklin } from "next/font/google";
 import Image from "next/image";
 import { Benefit, benefitsContentList } from "./content";
 import styles from "./css/benefits.module.css";
 
 const Libre = Libre_Franklin({ subsets: ["latin"] });
-
+const Inter = inter({ subsets: ["latin"] });
 export const Benefits = () => {
   const feature = "Key benefits";
   const title = "Unlock Your Potential with TaskBuddy";
@@ -58,20 +58,26 @@ const BenefitItem = ({
   return (
     <>
       <EasyReveal
+        width="100%"
+        margin={"0px 0px 50px 0px"}
+        threshold={0.1}
         className={`${styles.benefitItem} ${customClass}`}
         {...revealProps}
       >
         <li>
           <div className={styles.itemHeader}>
-            <h2>{benefit.title}</h2>
-            <p>{benefit.description}</p>
+            <h2 className={Inter.className}>{benefit.title}</h2>
+            <p className={Inter.className}> {benefit.description}</p>
           </div>
 
           {showBulletPoints && (
             <>
               <ul className={styles.bulletPointsList}>
                 {benefit.bulletPoints?.map((point) => (
-                  <li key={point} className={styles.bulletPoint}>
+                  <li
+                    key={point}
+                    className={`${styles.bulletPoint} ${Inter.className}`}
+                  >
                     <TaskBuddyCheckmark />
                     {point}
                   </li>

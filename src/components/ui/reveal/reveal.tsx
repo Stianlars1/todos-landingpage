@@ -1,11 +1,12 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactElement, ReactNode, useEffect, useRef } from "react";
-type MotionProps = "down" | "up" | "left" | "right" | "opacity";
+type MotionProps = "down" | "extraDown" | "up" | "left" | "right" | "opacity";
 
 export interface RevealProps {
   children?: ReactElement | ReactElement[] | ReactNode | ReactNode[];
   type: MotionProps;
+  isInViewOverride?: boolean;
   delay?: number;
   width?: "fit-content" | "100%";
   className?: string;
@@ -14,6 +15,7 @@ export interface RevealProps {
   onRevealed?: () => void;
   threshold?: number;
   nestedClassname?: string;
+  margin?: string;
 }
 
 const getMotionProps = (type: MotionProps) => {
@@ -22,6 +24,13 @@ const getMotionProps = (type: MotionProps) => {
       return {
         variants: {
           hidden: { opacity: 0, y: -40 },
+          visible: { opacity: 1, y: 0 },
+        },
+      };
+    case "extraDown":
+      return {
+        variants: {
+          hidden: { opacity: 1, y: -150 },
           visible: { opacity: 1, y: 0 },
         },
       };
@@ -58,6 +67,7 @@ const getMotionProps = (type: MotionProps) => {
 
 export const Reveal = ({
   children,
+  isInViewOverride,
   reset = false,
   type,
   delay = 0.25,
@@ -67,12 +77,13 @@ export const Reveal = ({
   duration = 0.5,
   threshold = 0.4,
   onRevealed,
+  margin = "50px 0px 50px 0px",
 }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: reset ? false : true,
     amount: threshold,
-    margin: "50px 0px 25px 0px",
+    margin: margin,
   });
 
   const motionProps = getMotionProps(type);
@@ -80,7 +91,7 @@ export const Reveal = ({
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView || isInViewOverride) {
       mainControls.start("visible");
       if (onRevealed) {
         onRevealed();
@@ -115,18 +126,19 @@ export const EasyReveal = ({
   children,
   reset = false,
   type,
-  delay = 0.25,
+  delay = 0.15,
   width = "fit-content",
   className = "",
   duration = 0.5,
   threshold = 0.4,
+  margin = "50px 0px 25px 0px",
   onRevealed,
 }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: reset ? false : true,
     amount: threshold,
-    margin: "50px 0px 25px 0px",
+    margin: margin,
   });
 
   const motionProps = getMotionProps(type);
