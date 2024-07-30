@@ -65,6 +65,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 .content .benefitList .benefitItem .bulletPointsList .bulletPoint {
   display: flex;
@@ -88,9 +89,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  min-width: 100%;
+  min-height: 100%;
 }
 .content .benefitList .benefitItem .itemContent .animationWrapper .animation {
   opacity: 0.95;
+}
+.content .benefitList .benefitItem .itemContent .animationWrapper .boostAnimation {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 120% !important;
+  bottom: calc(0% - 110px);
+  opacity: 0.2;
+}
+@media screen and (max-width: 768px) {
+  .content .benefitList .benefitItem .itemContent .animationWrapper .boostAnimation {
+    left: 25%;
+    bottom: calc(0% - 50px);
+  }
 }
 .content .benefitList .item0 {
   grid-column: 1/span 4;

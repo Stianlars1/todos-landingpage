@@ -1,4 +1,9 @@
-import { FastAnimation, LockAnimation } from "@/components/lottie/lotties";
+import {
+  BoostAnimation,
+  FastAnimation,
+  LockAnimation,
+  PulseAnimation,
+} from "@/components/lottie/lotties";
 
 export interface Benefit {
   title: string;
@@ -27,7 +32,8 @@ export const benefitsContentList: Benefit[] = [
     title: "Boost Efficiency",
     description:
       "Optimize your workflow with streamlined task management features, reducing the time spent on organizing and updating tasks.",
-    animated: false,
+    animated: true,
+    animation: BoostAnimation,
 
     bulletPoints: [
       "Quick task creation",
@@ -57,7 +63,8 @@ export const benefitsContentList: Benefit[] = [
     title: "Gain Clear Insights",
     description:
       "Understand your progress and upcoming deadlines with summary overviews and detailed reports.",
-    animated: false,
+    animated: true,
+    animation: PulseAnimation,
     // imgSrc: "graphIcon", // Example asset
   },
   {

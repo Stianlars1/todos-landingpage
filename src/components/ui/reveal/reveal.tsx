@@ -1,6 +1,12 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { ReactElement, ReactNode, useEffect, useRef } from "react";
+import {
+  CSSProperties,
+  ReactElement,
+  ReactNode,
+  useEffect,
+  useRef,
+} from "react";
 type MotionProps = "down" | "extraDown" | "up" | "left" | "right" | "opacity";
 
 export interface RevealProps {
@@ -13,9 +19,11 @@ export interface RevealProps {
   reset?: boolean;
   duration?: number;
   onRevealed?: () => void;
+  onReset?: () => void;
   threshold?: number;
   nestedClassname?: string;
   margin?: string;
+  style?: CSSProperties;
 }
 
 const getMotionProps = (type: MotionProps) => {
@@ -76,6 +84,8 @@ export const Reveal = ({
   nestedClassname = "",
   duration = 0.5,
   threshold = 0.4,
+  style,
+  onReset,
   onRevealed,
   margin = "50px 0px 50px 0px",
 }: RevealProps) => {
@@ -96,24 +106,32 @@ export const Reveal = ({
       if (onRevealed) {
         onRevealed();
       }
-    } else if (reset) {
+    } else if (!isInView && reset) {
       // Reset animation only when scrolling up near the top of the page
       mainControls.start("hidden");
+      if (onReset) {
+        onReset();
+      }
     }
-  }, [isInView, mainControls, onRevealed, reset]);
+  }, [isInView, isInViewOverride, mainControls, onReset, onRevealed, reset]);
 
   return (
     <>
       <div
         className={`reveal ${className}`}
         ref={ref}
-        style={{ position: "relative", width }}
+        style={{ position: "relative", width, ...style }}
       >
         <motion.div
           {...motionProps}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: duration, delay: delay }}
+          transition={{
+            duration: duration,
+            delay: delay,
+            ease: "easeInOut",
+            stiffness: 100,
+          }}
           className={`reveal-motion-wrapper reveal__motion-wrapper ${nestedClassname}`}
         >
           {children}

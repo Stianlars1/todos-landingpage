@@ -21,17 +21,32 @@ export const TaskCard = ({
   isInView: boolean;
   index: number;
 }) => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [animationClassName, setAnimationClassName] = useState(
     getInitialAnimationClassname(index)
   );
 
   useEffect(() => {
+    console.log("isInView", isInView);
     if (isInView) {
       setAnimationClassName(getAnimationClassname(index));
+      setHasMounted(true);
     } else {
-      setAnimationClassName(getInitialAnimationClassname(index));
+      if (hasMounted) {
+        setTimeout(() => {
+          console.log("exit animation");
+          setAnimationClassName(getInitialAnimationClassname(index));
+          setHasMounted(false);
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          console.log("initial animation");
+          setAnimationClassName(getInitialAnimationClassname(index));
+          setHasMounted(false);
+        }, 500);
+      }
     }
-  }, [isInView, index]);
+  }, [isInView, index, hasMounted]);
 
   return (
     <li

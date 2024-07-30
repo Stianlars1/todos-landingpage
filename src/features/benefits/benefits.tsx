@@ -90,7 +90,13 @@ const BenefitItem = ({
             {Animation && (
               <>
                 <div className={styles.animationWrapper}>
-                  {<Animation className={styles.animation} />}
+                  {
+                    <Animation
+                      className={`${styles.animation} ${
+                        index === 1 ? styles.boostAnimation : undefined
+                      }`}
+                    />
+                  }
                 </div>
               </>
             )}

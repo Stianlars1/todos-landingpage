@@ -91,6 +91,7 @@ $cardPrimary: #2563eb;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        margin-top: 1.5rem;
         .bulletPoint {
           display: flex;
           align-items: center;
@@ -119,6 +120,9 @@ $cardPrimary: #2563eb;
           display: flex;
           justify-content: center;
           align-items: center;
+          flex: 1;
+          min-width: 100%;
+          min-height: 100%;
 
           .animation {
             // position: absolute;
@@ -126,6 +130,22 @@ $cardPrimary: #2563eb;
             // left: 50%;
             // transform: translate(-50%, -50%);
             opacity: 0.95;
+          }
+
+          .boostAnimation {
+            overflow: hidden;
+
+            position: absolute;
+            height: 100%;
+            width: 120% !important;
+            bottom: calc(0% - 110px);
+
+            opacity: 0.2;
+
+            @media screen and (max-width: 768px) {
+              left: 25%;
+              bottom: calc(0% - 50px);
+            }
           }
         }
       }
