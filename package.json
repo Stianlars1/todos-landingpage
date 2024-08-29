@@ -11,12 +11,12 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.0",
     "@formkit/drag-and-drop": "^0.1.6",
-    "@stianlarsen/border-beam": "^1.0.6",
-    "@stianlarsen/meteors": "^1.0.2",
-    "@stianlarsen/react-fade-effects": "^1.0.4",
+    "@stianlarsen/border-beam": "^1.0.9",
+    "@stianlarsen/meteors": "^1.0.6",
+    "@stianlarsen/react-fade-effects": "^1.0.5",
     "@stianlarsen/react-light-beam": "^1.0.6",
     "@stianlarsen/react-ui-kit": "^1.1.15",
-    "framer-motion": "^11.3.30",
+    "framer-motion": "^11.3.31",
     "geist": "^1.3.1",
     "lottie-react": "^2.4.0",
     "next": "14.2.7",
@@ -30,7 +30,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.6",
+    "eslint-config-next": "14.2.7",
     "typescript": "^5.5.4"
   }
 }

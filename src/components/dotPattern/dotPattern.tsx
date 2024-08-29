@@ -34,7 +34,7 @@ export const DotPattern = ({
         <rect
           width="100%"
           height="100%"
-          stroke-width="0"
+          strokeWidth="0"
           fill="url(#:rcrle:)"
         ></rect>
       </svg>

@@ -104,7 +104,6 @@ export const Header = () => {
               />
             )}
 
-            <div></div>
             <div className={styles.imageShimmer} />
             {imageLoaded && (
               <BorderBeam
