@@ -1,9 +1,11 @@
 "use client";
 import { SectionHeader } from "@/components/sectionHeader/sectionHeader";
 import { SectionWrapper } from "@/components/sectionWrapper/sectionWrapper";
+import { LightBeam } from "@stianlarsen/react-light-beam";
 import { useState } from "react";
-import { Features } from "../features/features";
-import { KeyFeatures } from "../keyFeatures/keyFeatures";
+import styles from "./css/keyFeaturesContainer.module.css";
+import { Features } from "./features/features";
+import { KeyFeatures } from "./keyFeatures/keyFeatures";
 export const KeyFeaturesContainer = () => {
   const [showExamples, setShowExamples] = useState<boolean>(false);
   const [hasRendered, setHasRendered] = useState(false);
@@ -21,11 +23,18 @@ export const KeyFeaturesContainer = () => {
   return (
     <>
       <SectionWrapper>
+        <LightBeam
+          className={styles.lightBeam}
+          colorDarkmode="hsl(var(--primary) / 1)"
+          colorLightmode="hsl(var(--foreground) / 0.2)"
+          fullWidth={0.8}
+        />
         <SectionHeader
           feature={feature}
           title={title}
           description={description}
           animation={true}
+          className={styles.sectionHeader}
         />
         {!showExamples && <Features toggleExamples={toggleExamples} />}
         {showExamples && <KeyFeatures toggleExamples={toggleExamples} />}

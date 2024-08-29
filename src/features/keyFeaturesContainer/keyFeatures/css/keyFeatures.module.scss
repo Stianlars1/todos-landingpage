@@ -1,0 +1,217 @@
+.features {
+  padding: 0 2rem 0;
+  background-color: hsl(var(--muted));
+  position: relative;
+  font-family: inherit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000%;
+    right: -1000%;
+    background-color: hsl(var(--border));
+    z-index: -1;
+  }
+}
+
+.featuresContent {
+  max-width: 64rem;
+
+  .featuresList {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+    .featureItemEven {
+      grid-template-columns: 0.5fr 1fr;
+    }
+    .featureItemOdd {
+      grid-template-columns: 1fr 0.5fr;
+    }
+
+    .featureItem {
+      display: grid;
+      place-items: center;
+      gap: 2.25rem;
+      grid-template-rows: 100dvh;
+      scroll-snap-align: start;
+
+      .featureHeader {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        gap: 0.25rem;
+        position: relative;
+        .featureItemTitle {
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+          text-wrap: balance;
+          text-align: left;
+          font-weight: 400;
+
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.5rem;
+
+          flex-wrap: wrap;
+
+          .customIcon {
+            color: hsl(var(--foreground));
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .featureItemDescription {
+          font-size: 1rem;
+          color: hsl(var(--muted-foreground));
+          text-wrap: pretty;
+          max-width: 100%;
+          min-width: 0;
+        }
+      }
+
+      .featureContent {
+        .featureImage {
+          width: 100%;
+          height: auto;
+          border: 1px solid hsl(var(--border));
+          border-radius: 0.5rem;
+
+          transition: opacity 0.75s 0.35s ease, transform 0.75s 0.35s ease;
+
+          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03),
+            /* Top shadow */ 0 2px 5px rgba(0, 0, 0, 0.03),
+            /* Bottom shadow */ -2px 0 5px rgba(0, 0, 0, 0.03),
+            /* Left shadow */ 2px 0 5px rgba(0, 0, 0, 0.03);
+        }
+      }
+    }
+  }
+}
+
+.concludingMessage {
+  margin-top: 2rem;
+  padding: 3rem 0 3rem;
+  background-color: hsl(var(--muted));
+  position: relative;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  p {
+    color: hsl(var(--muted-foreground));
+    font-size: 1rem;
+    text-align: center;
+    max-width: 660px;
+    text-wrap: balance;
+    font-weight: 700;
+  }
+
+  a {
+    padding: 8px 20px;
+    background-color: hsl(var(--primary));
+    border-radius: 999999999px;
+    color: hsl(var(--white));
+    text-decoration: none;
+    font-size: 0.875rem;
+
+    &:hover {
+      text-decoration: none;
+      background-color: hsl(var(--primary) / 0.75);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000%;
+    right: -1000%;
+    background-color: hsl(var(--muted));
+
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .featuresContent {
+    .featuresList {
+      .featureItem {
+        gap: 6rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .featuresContent {
+    .featuresList {
+      .featureItem {
+        gap: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .featuresContent {
+    .featuresList {
+      gap: 12rem;
+
+      // make the items change order
+      .featureItemEven {
+        .featureHeader {
+          order: 1;
+        }
+        .featureContent {
+          order: 2;
+        }
+      }
+
+      .featureItemOdd {
+        .featureHeader {
+          order: 1;
+        }
+        .featureContent {
+          order: 2;
+        }
+      }
+      .featureItem {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+
+        .featureHeader {
+          width: 100%;
+          margin: 0 auto;
+          margin-right: auto;
+          gap: 0.25rem;
+
+          .featureItemTitle {
+            justify-content: flex-start;
+          }
+          .featureItemDescription {
+            text-align: left;
+            text-wrap: pretty;
+          }
+        }
+
+        .featureContent {
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .featuresContent {
+    .featuresList {
+    }
+  }
+}

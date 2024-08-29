@@ -1,5 +1,18 @@
+.sectionHeader p {
+  position: relative;
+  color: hsl(var(--foreground)/0.9) !important;
+}
+
+.lightBeam {
+  position: absolute;
+  top: -50px;
+  z-index: -100;
+  height: 100%;
+}
+
 .content {
   width: 100%;
+  position: relative;
 }
 .content .contentList {
   display: grid;

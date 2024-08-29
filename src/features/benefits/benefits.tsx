@@ -63,6 +63,7 @@ const BenefitItem = ({
         threshold={0.1}
         className={`${styles.benefitItem} ${customClass}`}
         {...revealProps}
+        reset={false}
       >
         <li>
           <div className={styles.itemHeader}>

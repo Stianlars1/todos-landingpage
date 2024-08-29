@@ -93,7 +93,7 @@ export const Reveal = ({
   const isInView = useInView(ref, {
     once: reset ? false : true,
     amount: threshold,
-    margin: margin,
+    margin: margin as any,
   });
 
   const motionProps = getMotionProps(type);
@@ -156,7 +156,7 @@ export const EasyReveal = ({
   const isInView = useInView(ref, {
     once: reset ? false : true,
     amount: threshold,
-    margin: margin,
+    margin: margin as any,
   });
 
   const motionProps = getMotionProps(type);

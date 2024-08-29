@@ -1,22 +1,26 @@
 "use client";
 import { Tag } from "@/components/ui/tag/tag";
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
-import { APP_URL_SIGNUP } from "@/utils/constants";
+import { APP_URL_LEARN_MORE, APP_URL_SIGNUP } from "@/utils/constants";
+import { BorderBeam } from "@stianlarsen/border-beam";
+import { FadedWords } from "@stianlarsen/react-fade-effects";
 import { Libre_Franklin } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { TaskBuddyLandingSVGDark } from "./assets/taskBuddyLandingSVGDark";
+import { TaskBuddyLandingSVGLight } from "./assets/taskBuddyLandingSVGLight";
 import styles from "./css/header.module.css";
 
 const Libre = Libre_Franklin({ subsets: ["latin"] });
 
 export const Header = () => {
-  const [isClient, setIsClient] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const { isDarkmodeActive } = useIsDarkmodeActive();
 
   useEffect(() => {
-    setIsClient(true);
+    setTimeout(() => {
+      setImageLoaded(true);
+    }, 5);
   }, []);
 
   return (
@@ -37,47 +41,84 @@ export const Header = () => {
               ⚠ Under construction
             </Tag>
             <h1 className={Libre.className}>
-              Effortless Task Management with TaskBuddy
+              <FadedWords
+                delay={0}
+                duration={1}
+                words="Effortless Task Management with TaskBuddy"
+                variant="up"
+                scaleSize={1.1}
+              />
             </h1>
-            <p className={Libre.className}>
-              Streamline your workflow, boost productivity, and achieve your
-              goals with TaskBuddy - the ultimate task management app.
-            </p>
+            <div className={`${Libre.className} ${styles.description}`}>
+              <FadedWords
+                delay={500}
+                variant="up"
+                duration={0.5}
+                staggerTime={0.025}
+                scaleSize={1.1}
+                words="Streamline your workflow, boost productivity, and achieve your
+              goals with TaskBuddy - the ultimate task management app."
+              />
+            </div>
           </div>
           <div
             className={`${styles.cta} ${imageLoaded ? styles.ctaLoaded : ""}`}
           >
-            <Link href={APP_URL_SIGNUP}>
-              <button>Get Started</button>
+            <Link
+              className={`${styles.get_started} ${styles.link}`}
+              href={APP_URL_SIGNUP}
+            >
+              Get Started
             </Link>
-            <button>Learn More</button>
+            <Link
+              className={`${styles.learn_more} ${styles.link}`}
+              href={APP_URL_LEARN_MORE}
+            >
+              Learn More
+            </Link>
           </div>
         </div>
 
         <div className={styles.right}>
           <div
             className={styles.imageWrapper}
-            style={{ visibility: imageLoaded ? "visible" : "hidden" }}
+            style={{
+              visibility: imageLoaded ? "visible" : "hidden",
+              borderRadius: "0.5rem",
+              overflow: "hidden",
+            }}
           >
-            <Image
-              draggable={false}
-              src={`/images/${
-                isDarkmodeActive ? "hero_dark" : "hero_light"
-              }.png`}
-              alt="TaskBuddy hero image"
-              width={0}
-              height={0}
-              sizes="100%"
-              style={{ width: "100%", height: "auto" }}
-              loading="eager"
-              priority
-              fetchPriority="high"
-              className={`${styles.image} ${
-                imageLoaded ? styles.imageLoaded : ""
-              }`}
-              onLoad={() => setImageLoaded(true)}
-            />
+            {isDarkmodeActive ? (
+              <TaskBuddyLandingSVGDark
+                className={`${styles.landingSVG} ${styles.image} ${
+                  imageLoaded ? styles.imageLoaded : ""
+                }`}
+                style={undefined}
+              />
+            ) : (
+              <TaskBuddyLandingSVGLight
+                className={`${styles.landingSVG} ${styles.image} ${
+                  imageLoaded ? styles.imageLoaded : ""
+                }`}
+                style={undefined}
+              />
+            )}
+
+            <div></div>
             <div className={styles.imageShimmer} />
+            {imageLoaded && (
+              <BorderBeam
+                duration={5.3}
+                size={300}
+                colorFrom="hsl(var(--foreground))"
+                colorTo="transparent"
+                // colorFrom="#9c40ff"
+                // colorTo="hsl(var(--primary))"
+                className={`${styles.borderBeam} ${
+                  imageLoaded ? styles.borderBeamLoaded : ""
+                }`}
+              />
+            )}
           </div>
           <div
             className={styles.imagePlaceholder}

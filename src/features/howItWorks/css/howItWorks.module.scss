@@ -1,5 +1,55 @@
+.sectionHeader {
+  p {
+    position: relative;
+
+    color: hsl(var(--foreground) / 0.9) !important;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   inset: -20px -20px -20px -20px;
+
+    //   background-color: hsl(var(--background));
+    //   z-index: -1;
+    //   border-radius: 0;
+    //   filter: blur(30px);
+    // }
+  }
+}
+
+.lightBeam {
+  position: absolute;
+  top: -50px;
+  z-index: -100;
+  height: 100%;
+}
 .content {
   width: 100%;
+  position: relative;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: -200px;
+  //   left: -1000%;
+  //   right: -1000%;
+  //   bottom: -200px;
+
+  //   background: transparent;
+  //   @media screen and (prefers-color-scheme: "dark") {
+  //     background: linear-gradient(
+  //       180deg,
+  //       transparent 0%,
+  //       #375482 1%,
+  //       #1e293b40 5%,
+  //       #1e293b63 10%,
+  //       #1e293b80 20%,
+  //       transparent 100%
+  //     );
+  //   }
+
+  //   z-index: -1;
+  // }
   .contentList {
     display: grid;
     width: fit-content;

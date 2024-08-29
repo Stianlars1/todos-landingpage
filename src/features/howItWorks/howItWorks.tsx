@@ -3,6 +3,7 @@ import { SectionHeader } from "@/components/sectionHeader/sectionHeader";
 import { SectionWrapper } from "@/components/sectionWrapper/sectionWrapper";
 import { Reveal } from "@/components/ui/reveal/reveal";
 import { useBrowserInfo } from "@/hooks/useBrowserInfo";
+import { LightBeam } from "@stianlarsen/react-light-beam";
 import { useEffect, useState } from "react";
 import { howItWorksSteps, HowItWorksStepsType } from "./content";
 import styles from "./css/howItWorks.module.css";
@@ -14,10 +15,16 @@ export const HowItWorks = () => {
   const featureTag = "Is it for you?";
   return (
     <SectionWrapper>
+      <LightBeam
+        colorDarkmode="#1e293b"
+        colorLightmode="transparent"
+        className={styles.lightBeam}
+      />
       <SectionHeader
         feature={featureTag}
         title={title}
         description={description}
+        className={styles.sectionHeader}
       />
 
       <HowItWorksContent />
@@ -87,7 +94,6 @@ const HowItWorksStep = ({
         delay={0.1}
         type="left"
         width="100%"
-        reset
       >
         <li
           className={`${styles.contentItem} ${

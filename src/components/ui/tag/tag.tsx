@@ -1,7 +1,6 @@
-import { Libre_Franklin } from "next/font/google";
+import { NextFont } from "next/dist/compiled/@next/font";
 import { CSSProperties } from "react";
 import cssstyles from "./css/tag.module.css";
-const Libre = Libre_Franklin({ subsets: ["latin"] });
 export const Tag = ({
   children,
   width,
@@ -9,6 +8,7 @@ export const Tag = ({
   backgroundHEX = " ",
   textColorHEX = " ",
   style,
+  libre,
 }: {
   children: string;
   width?: "fit-content" | "100%";
@@ -16,6 +16,7 @@ export const Tag = ({
   backgroundHEX?: string;
   textColorHEX?: string;
   style?: CSSProperties;
+  libre?: NextFont;
 }) => {
   const styles: CSSProperties = {
     ...style,
@@ -26,7 +27,7 @@ export const Tag = ({
   return (
     <div
       style={styles}
-      className={`${cssstyles.tag} ${className} ${Libre.className}`}
+      className={`${cssstyles.tag} ${className} ${libre?.className}`}
     >
       {children}
     </div>

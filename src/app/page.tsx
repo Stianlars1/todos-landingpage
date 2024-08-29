@@ -1,9 +1,9 @@
-"use client";
-import { CardStack } from "@/components/3d/cardStack/cardStack";
+// "use client";
 import { GridSection } from "@/components/grid/components/gridSection/gridSection";
 import { GridContainer } from "@/components/grid/components/gridcontainer/gridcontainer";
 import { Benefits } from "@/features/benefits/benefits";
 import { CallToAction } from "@/features/callToAction/callToAction";
+import { DashboardShowcase } from "@/features/dashboardShowcase/dashboardShowcase";
 import { Demo } from "@/features/demo/demo";
 import { Header } from "@/features/header/header";
 import { HowItWorks } from "@/features/howItWorks/howItWorks";
@@ -18,7 +18,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <GridContainer>
@@ -26,12 +26,16 @@ export default function Home() {
           <Header />
         </GridSection>
 
-        <GridSection>
+        {/* <GridSection>
           <CardStack />
-        </GridSection>
+        </GridSection> */}
 
         <GridSection>
           <KeyFeaturesContainer />
+        </GridSection>
+
+        <GridSection>
+          <DashboardShowcase />
         </GridSection>
 
         <GridSection>

@@ -1,0 +1,15 @@
+.lightBeam {
+  position: absolute;
+  overflow: visible;
+  top: -100px;
+  bottom: 0;
+  width: 100vw !important;
+  max-height: 500px;
+  z-index: -1;
+}
+
+.sectionHeader {
+  p {
+    color: hsl(var(--foreground) / 0.9) !important;
+  }
+}

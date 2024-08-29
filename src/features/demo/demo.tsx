@@ -28,7 +28,7 @@ export const Demo = () => {
 const InteractiveDemo = () => {
   return (
     <div className={`${styles.content} ${Libre.className}`}>
-      <Reveal threshold={0.1} reset delay={0.25} type="opacity" width="100%">
+      <Reveal threshold={0.1} delay={0.25} type="opacity" width="100%">
         <div className={styles.playground}>
           <TaskDemo />
         </div>

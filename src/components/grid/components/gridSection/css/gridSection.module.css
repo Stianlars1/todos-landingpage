@@ -1,6 +1,6 @@
 .gridSection {
   max-width: calc(var(--max-width) - 300px);
-  padding: 6rem 0 6rem;
+  padding: 10rem 0 10rem;
   margin: 0 auto;
   overflow-x: visible;
 }

@@ -11,6 +11,7 @@ interface Props {
   description: string;
   children?: React.ReactNode;
   animation?: boolean;
+  className?: string;
 }
 export const SectionHeader = ({
   feature,
@@ -18,23 +19,29 @@ export const SectionHeader = ({
   description,
   children,
   animation = true,
+  className = "",
 }: Props) => {
   return (
     <>
-      <div className={styles.sectionHeader} suppressHydrationWarning>
+      <div
+        className={`${styles.sectionHeader} ${className}`}
+        suppressHydrationWarning
+      >
         {animation && feature && feature.length > 0 && (
-          <Reveal reset delay={0.1} type="opacity" duration={1} width="100%">
+          <Reveal delay={0.1} type="opacity" duration={1} width="100%">
             <Tag>{feature}</Tag>
           </Reveal>
         )}
         {!animation && feature && feature.length > 0 && <Tag>{feature}</Tag>}
         {animation ? (
           <>
-            <Reveal reset delay={0.15} type="opacity" duration={1} width="100%">
+            <Reveal delay={0.15} type="opacity" duration={1} width="100%">
               <h2 className={`${styles.title} ${Libre.className}`}>{title}</h2>
             </Reveal>
-            <Reveal reset delay={0.2} type="opacity" duration={1} width="100%">
-              <p className={`${styles.description} ${Libre.className}`}>
+            <Reveal delay={0.2} type="opacity" duration={1} width="100%">
+              <p
+                className={`description ${styles.description} ${Libre.className}`}
+              >
                 {description}
               </p>
             </Reveal>
@@ -42,7 +49,9 @@ export const SectionHeader = ({
         ) : (
           <>
             <h2 className={`${styles.title} ${Libre.className}`}>{title}</h2>
-            <p className={`${styles.description} ${Libre.className}`}>
+            <p
+              className={`description ${styles.description} ${Libre.className}`}
+            >
               {description}
             </p>
           </>

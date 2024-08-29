@@ -1,0 +1,44 @@
+.imageContainer {
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.imageContainer .imageWrapper {
+  position: relative;
+  contain: strict;
+  width: 100%;
+  height: 100%;
+  perspective: 4000px;
+  perspective-origin: 100% 0;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+.imageContainer .imageWrapper .image {
+  transform: translateX(10%) translateY(10%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+.imageContainer .imageWrapper::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -8px;
+  z-index: -2;
+  background: linear-gradient(to right, transparent 80%, hsl(var(--background)) 90%);
+}
+.imageContainer::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0px;
+  z-index: 2;
+  background: linear-gradient(to bottom, transparent 50%, hsl(var(--background)) 100%);
+}/*# sourceMappingURL=learnMoreHeaderSVG.module.css.map */
