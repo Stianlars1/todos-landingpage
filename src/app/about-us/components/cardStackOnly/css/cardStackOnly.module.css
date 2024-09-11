@@ -8,6 +8,9 @@
   isolation: isolate;
   background-color: transparent;
   z-index: -10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cardStack .cardsContainer {
   width: 100%;

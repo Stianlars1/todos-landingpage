@@ -2765,7 +2765,7 @@ export const LearnMoreSummary = ({
                 "--top": "0%",
                 "--opacity": "0.2",
 
-                transform: `skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(120px) translateX(0%) translateY(var(--top))`,
+                transform: `skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(120px) translateX(-10%) translateY(var(--top))`,
                 zIndex: 100,
                 background: "hsl(var(--primary) / var(--opacity))",
               } as CSSProperties
@@ -2782,7 +2782,7 @@ export const LearnMoreSummary = ({
                 "--opacity": "0.2",
 
                 transform:
-                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(0px) translateX(-3%) translateY(var(--top))",
+                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(0px) translateX(-7%) translateY(var(--top))",
                 zIndex: 90,
                 background: "hsl(var(--warning) / var(--opacity))",
               } as CSSProperties
@@ -2798,7 +2798,7 @@ export const LearnMoreSummary = ({
                 "--top": "0%",
                 "--opacity": "0.2",
                 transform:
-                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(-120px) translateX(0%) translateY(var(--top))",
+                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(-120px) translateX(-4%) translateY(var(--top))",
                 zIndex: 80,
                 background: "hsl(var(--destructive) / var(--opacity))",
               } as CSSProperties
@@ -2815,7 +2815,7 @@ export const LearnMoreSummary = ({
                 "--top": "0%",
                 "--opacity": "0.2",
                 transform:
-                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(-240px) translateX(6%) translateY(var(--top))",
+                  "skewY(4deg) rotateX(-14deg) rotateY(-20deg) translateZ(-240px) translateX(-1%) translateY(var(--top))",
                 zIndex: 70,
                 backgroundColor: "hsl(var(--success) / var(--opacity))",
               } as CSSProperties

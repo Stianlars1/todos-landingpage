@@ -92,7 +92,7 @@ export const SimpleTaskCard = ({
   return (
     <li
       suppressHydrationWarning={true}
-      className={`reveal-card-simple simple-card ${className}`}
+      className={`reveal-card-simple  ${className}`}
       style={style}
       id={index === 0 ? "one" : index === 1 ? "two" : "three"}
     >

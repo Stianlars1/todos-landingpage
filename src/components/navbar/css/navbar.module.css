@@ -55,6 +55,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    height: auto;
     height: calc-size(auto);
     background-color: hsl(var(--card)/0.8);
     -webkit-backdrop-filter: blur(24px);
