@@ -1,19 +1,17 @@
 "use client";
-import { TaskBuddyLandingSVGDark } from "@/features/header/assets/taskBuddyLandingSVGDark";
-import { TaskBuddyLandingSVGLight } from "@/features/header/assets/taskBuddyLandingSVGLight";
-import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
+import { TasksSVG } from "../../../../../../public/images/about-us/TasksSVG";
 import styles from "./css/learnMoreHeaderSVG.module.css";
-export const LearnMoreHeaderSVG = () => {
-  const { isDarkmodeActive } = useIsDarkmodeActive();
+export const LearnMoreHeaderSVG = ({
+  className = "",
+}: {
+  className?: string;
+}) => {
   return (
     <div className={styles.imageContainer}>
       <div className={styles.imageWrapper}>
-        {isDarkmodeActive ? (
-          <TaskBuddyLandingSVGDark className={styles.image} />
-        ) : (
-          <TaskBuddyLandingSVGLight className={styles.image} />
-        )}
+        <TasksSVG className={`${styles.image} ${className}`} />
       </div>
+      <div className={styles.imageShade} />
     </div>
   );
 };

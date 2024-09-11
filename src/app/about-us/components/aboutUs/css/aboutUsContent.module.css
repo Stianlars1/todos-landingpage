@@ -1,0 +1,136 @@
+.aboutUsContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  margin: 300px auto 0 !important;
+  gap: 3rem;
+  position: relative;
+  overflow: visible;
+}
+.aboutUsContent .section {
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  border-bottom: 2px solid hsl(var(--border));
+  padding-bottom: 6rem;
+  z-index: 10;
+}
+.aboutUsContent .section .list {
+  flex: 1 1 50%;
+}
+.aboutUsContent .section .list .listitem {
+  list-style-type: none;
+}
+.aboutUsContent .section .list .listitem .heading3 {
+  font-size: 1rem;
+}
+.aboutUsContent .section .teamList {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.aboutUsContent .section .teamList .teamMember {
+  list-style-type: none;
+}
+.aboutUsContent .section .teamList .teamMember .image {
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  display: block;
+}
+.aboutUsContent .section .linkHref {
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+.aboutUsContent .section .linkHref:visited {
+  color: hsl(var(--foreground)/0.6);
+}
+.aboutUsContent .section .linkHref:hover {
+  text-decoration: underline;
+}
+.aboutUsContent .taskSection .taskSectionHeader {
+  flex: 1 1 50%;
+  z-index: 10;
+  display: inline-block;
+}
+.aboutUsContent .taskSection .taskSectionCards {
+  flex: 1 1 50%;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lightBeam {
+  position: absolute;
+  min-width: calc(100% + 300px + 128px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: -150px;
+  overflow: visible;
+}
+
+.heading2 {
+  flex: 1 1 50%;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.paragraph {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 300;
+  line-height: 1.45rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1080px) {
+  .aboutUsContent .taskSection {
+    gap: 24px;
+  }
+  .aboutUsContent .taskSection .taskSectionHeader {
+    flex: 1 1 50%;
+  }
+  .aboutUsContent .taskSection .taskSectionCards {
+    flex: 1 1 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutUsContent {
+    margin: 250px auto 0 !important;
+  }
+  .aboutUsContent .section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .aboutUsContent .taskSection {
+    gap: 24px;
+    flex-direction: column;
+  }
+  .aboutUsContent .taskSection .taskSectionHeader {
+    flex: 1 1 100%;
+    z-index: 10;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .aboutUsContent .taskSection .taskSectionHeader > .heading2 {
+    min-width: 50%;
+  }
+  .aboutUsContent .taskSection .taskSectionCards {
+    flex: 1 1 40%;
+    z-index: 0;
+    display: inline-block;
+    margin-top: -50px;
+  }
+  .aboutUsContent .taskSection .taskSectionCards > div {
+    max-height: 250px;
+  }
+}/*# sourceMappingURL=aboutUsContent.module.css.map */

@@ -13,3 +13,25 @@
     color: hsl(var(--foreground) / 0.9) !important;
   }
 }
+
+.lightBeamLoaded {
+}
+
+@media screen and (min-width: 1400px) {
+  .lightBeamLoaded {
+    opacity: 0;
+    visibility: hidden;
+    animation: lightbeamLoad 0.5s 3s ease-out forwards;
+  }
+}
+
+@keyframes lightbeamLoad {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

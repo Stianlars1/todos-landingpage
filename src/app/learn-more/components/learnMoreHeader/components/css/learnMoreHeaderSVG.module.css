@@ -1,11 +1,16 @@
 .imageContainer {
   width: 100%;
-  height: 500px;
+  height: auto;
   z-index: 1;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   position: relative;
+  aspect-ratio: 2.13/1;
+  max-height: 500px;
+  overflow: hidden;
+  margin-top: -100px;
+  z-index: -1;
 }
 .imageContainer .imageWrapper {
   position: relative;
@@ -15,24 +20,31 @@
   perspective: 4000px;
   perspective-origin: 100% 0;
   transform-style: preserve-3d;
-  z-index: 0;
+  z-index: -1;
 }
 .imageContainer .imageWrapper .image {
   transform: translateX(10%) translateY(10%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
   transform-origin: center center;
   backface-visibility: hidden;
   position: relative;
-  z-index: -1;
+  z-index: -10;
   width: 100%;
   height: auto;
 }
-.imageContainer .imageWrapper::before {
-  content: "";
+.imageContainer .imageShade {
+  z-index: 1000;
   pointer-events: none;
   position: absolute;
   inset: -8px;
-  z-index: -2;
-  background: linear-gradient(to right, transparent 80%, hsl(var(--background)) 90%);
+  z-index: 1000;
+  background: linear-gradient(to right, transparent 80%, hsl(var(--background)) 100%);
+}
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, hsl(var(--background)) 17%, transparent 35%);
 }
 .imageContainer::after {
   content: "";
@@ -41,4 +53,65 @@
   inset: 0px;
   z-index: 2;
   background: linear-gradient(to bottom, transparent 50%, hsl(var(--background)) 100%);
+}
+
+@media screen and (max-width: 1400px) {
+  .imageContainer {
+    margin-top: -75px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .imageContainer .imageWrapper .image {
+    width: 125%;
+    transform: translateX(5%) translateY(5%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .imageContainer .imageWrapper .image {
+    width: 150%;
+    transform: translateX(4%) translateY(3%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  }
+  .imageContainer .imageShade {
+    background: linear-gradient(to right, transparent 75%, hsl(var(--background)) 95%);
+  }
+}
+@media screen and (max-width: 900px) {
+  .imageContainer {
+    aspect-ratio: 2.13/1.2;
+  }
+  .imageContainer .imageWrapper .image {
+    width: 160%;
+    transform: translateX(3.5%) translateY(5%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  }
+  .imageContainer .imageShade {
+    background: linear-gradient(to right, transparent 75%, hsl(var(--background)) 95%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .imageContainer {
+    max-height: 700px;
+    aspect-ratio: 2.13/1.5;
+    margin-top: -110px;
+  }
+  .imageContainer .imageWrapper .image {
+    width: 175%;
+    transform: translateX(2%) translateY(10%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  .imageContainer {
+    max-height: none;
+    aspect-ratio: 2.13/1.5;
+    margin-top: -70px;
+    min-width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .imageContainer .imageShade {
+    background: linear-gradient(to right, transparent 70%, hsl(var(--background)) 90%);
+  }
+  .imageContainer .imageWrapper .image {
+    width: 175%;
+    transform: translateX(2%) translateY(10%) scale(1) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  }
 }/*# sourceMappingURL=learnMoreHeaderSVG.module.css.map */

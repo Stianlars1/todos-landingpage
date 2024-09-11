@@ -1,9 +1,8 @@
 import { Footer } from "@/components/footer/footer";
 import { Navbar } from "@/components/navbar/navbar";
-import { Inter, Libre_Franklin } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const libre = Libre_Franklin({ subsets: ["latin"] });
 export default function RootLayout({
   children,
@@ -23,7 +22,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={libre.className}>
+      <body data-nav-open={false.toString()} className={libre.className}>
         <Navbar />
         {children}
 

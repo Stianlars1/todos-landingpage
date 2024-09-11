@@ -1,12 +1,138 @@
-.navbar {
-  height: 44px;
+.navWrapper {
+  position: fixed;
+  top: 0.5rem;
+  width: calc(100% - 2rem * 2);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1024px;
+  // height: var(--nav-height);
+  height: var(--nav-height);
+  padding: 6.35px 20px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 20px;
-  max-width: var(--max-width);
-  gap: 0.5rem;
+  justify-content: space-between;
 
-  .taskbuddyLogo {
+  margin: 0 auto;
+  background-color: hsl(var(--card) / 0.5);
+
+  z-index: 100; /* Higher than the pseudo-element */
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 0.75px solid hsl(var(--foreground) / 0.25);
+
+  transition: height 0.157s ease-in;
+}
+.topBlur {
+  content: "";
+  position: fixed;
+  top: 0rem;
+  right: 0;
+  left: 0;
+  height: calc(
+    0.5rem
+  ); /* Cover only the space from viewport top to navWrapper */
+  // background-color: rgba(0, 0, 0, 0.1);
+  background-color: light-dark(
+    hsl(var(--backgorund) / 0.1),
+    hsl(var(--card) / 0.5)
+  );
+  backdrop-filter: blur(11px);
+  z-index: 99; /* Ensure it's still behind the navWrapper */
+}
+
+.navbar {
+  // position: fixed;
+  // top: -2px;
+  // left: 0;
+  // right: 0;
+  // height: var(--nav-height);
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1000;
+  // max-width: var(--max-width);
+  // margin: 0 auto;
+  // background-color: hsl(var(--card) / 0.1);
+  // z-index: 100000;
+  // backdrop-filter: blur(20px);
+  // border-radius: 999999px;
+  // border: 0.75px solid hsl(var(--border));
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsl(var(--foreground));
+
+    text-decoration: none;
+  }
+
+  .logoText {
+    display: initial;
+  }
+}
+
+[data-nav-open="true"] {
+  @media screen and (max-width: 600px) {
+    .navWrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: calc-size(auto);
+      background-color: hsl(var(--card) / 0.8);
+      backdrop-filter: blur(24px);
+    }
+  }
+}
+
+[data-nav-open="false"] {
+  @media screen and (max-width: 600px) {
+    .navWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: var(--nav-height);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navWrapper {
+    width: calc(100% - 1.5rem * 2);
+  }
+}
+@media screen and (max-width: 640px) {
+  .navbar {
+    .logoText {
+      display: none;
+    }
+  }
+  .navWrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    .logoText {
+    }
+  }
+  .navWrapper {
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navWrapper {
+    width: calc(100% - 20px * 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .navWrapper {
+    width: calc(100% - 1rem * 2);
+  }
+}
+@media screen and (max-width: 350px) {
+  .navWrapper {
+    width: calc(100% - 10px * 2);
   }
 }

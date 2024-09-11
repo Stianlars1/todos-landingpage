@@ -104,11 +104,8 @@
   transform: translateY(-10px);
   transition: opacity 1.1s 1.5s ease, transform 1s 0.5s ease;
   overflow: hidden;
+  animation: imageLoad 1s 1.5s ease forwards;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.06), 0 2px 5px rgba(0, 0, 0, 0.06), -2px 0 5px rgba(0, 0, 0, 0.06), 2px 0 5px rgba(0, 0, 0, 0.06);
-}
-.header .right .imageLoaded {
-  opacity: 1;
-  transform: translateY(0);
 }
 .header .right .landingSVG {
   width: 100%;
@@ -122,14 +119,6 @@
 .header .right .borderBeamLoaded {
   animation: borderLoad 1s 1.5s linear forwards;
 }
-@keyframes borderLoad {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .header .right .imageShimmer {
   position: absolute;
   top: 0;
@@ -140,7 +129,7 @@
   opacity: 0;
   animation: shimmer 4s 2.5s infinite linear forwards;
 }
-@media screen and (prefers-color-scheme = dark) {
+@media screen and (prefers-color-scheme: dark) {
   .header .right .imageShimmer {
     background: linear-gradient(to right, transparent, hsl(var(--white)));
   }
@@ -225,5 +214,23 @@
   }
   .header .right .image {
     max-width: 100%;
+  }
+}
+@keyframes imageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes borderLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=header.module.css.map */

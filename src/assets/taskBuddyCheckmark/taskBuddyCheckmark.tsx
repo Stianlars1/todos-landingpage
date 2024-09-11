@@ -1,4 +1,8 @@
-export const TaskBuddyCheckmark = () => {
+export const TaskBuddyCheckmark = ({
+  className = "",
+}: {
+  className?: string;
+}) => {
   return (
     <svg
       width="16"
@@ -6,6 +10,7 @@ export const TaskBuddyCheckmark = () => {
       viewBox="0 0 1541 1138"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M56.046 527.714C25.1945 496.863 25.1946 446.843 56.046 415.991L152.301 319.736C183.153 288.884 233.173 288.884 264.024 319.736L414.02 469.731C415.191 470.903 415.191 472.802 414.02 473.974L210.284 677.709C209.112 678.881 207.213 678.881 206.041 677.709L56.046 527.714Z"

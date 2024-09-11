@@ -1,0 +1,162 @@
+.aboutUsContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+
+  margin: 300px auto 0 !important;
+
+  gap: 3rem;
+  position: relative;
+  overflow: visible;
+
+  .section {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+    border-bottom: 2px solid hsl(var(--border));
+    padding-bottom: 6rem;
+    z-index: 10;
+
+    .list {
+      flex: 1 1 50%;
+
+      .listitem {
+        list-style-type: none;
+        .heading3 {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .teamList {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .teamMember {
+        list-style-type: none;
+
+        .image {
+          border-radius: 50%;
+          margin: 0 auto 2rem;
+          display: block;
+        }
+      }
+    }
+
+    .linkHref {
+      color: hsl(var(--primary));
+      text-decoration: none;
+
+      &:visited {
+        color: hsl(var(--foreground) / 0.6);
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .taskSection {
+    .taskSectionHeader {
+      flex: 1 1 50%;
+      z-index: 10;
+      display: inline-block;
+    }
+    .taskSectionCards {
+      flex: 1 1 50%;
+      z-index: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+}
+
+.lightBeam {
+  position: absolute;
+  min-width: calc(100% + 300px + 2 * 64px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: -150px;
+  overflow: visible;
+  // position: absolute;
+  // width: calc(100% + 300px);
+  // left: 50%;
+  // transform: translateX(-50%);
+  // z-index: 10;
+  // top: -100px;
+}
+
+.heading2 {
+  flex: 1 1 50%;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  text-wrap: balance;
+}
+.paragraph {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-weight: 300;
+  line-height: 1.45rem;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1080px) {
+  .aboutUsContent {
+    .taskSection {
+      gap: 24px;
+      .taskSectionHeader {
+        flex: 1 1 50%;
+      }
+      .taskSectionCards {
+        flex: 1 1 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .aboutUsContent {
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutUsContent {
+    margin: 250px auto 0 !important;
+    .section {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .taskSection {
+      gap: 24px;
+      flex-direction: column;
+      .taskSectionHeader {
+        flex: 1 1 100%;
+        z-index: 10;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        > .heading2 {
+          min-width: 50%;
+        }
+      }
+      .taskSectionCards {
+        flex: 1 1 40%;
+        z-index: 0;
+        display: inline-block;
+        margin-top: -50px;
+        > div {
+          max-height: 250px;
+        }
+      }
+    }
+  }
+}

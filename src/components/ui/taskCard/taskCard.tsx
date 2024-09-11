@@ -12,6 +12,7 @@ export const TaskCard = ({
   priority,
   style = undefined,
   index,
+  className = "",
 }: {
   title: string;
   description: string;
@@ -20,6 +21,7 @@ export const TaskCard = ({
   style?: CSSProperties;
   isInView: boolean;
   index: number;
+  className?: string;
 }) => {
   const [hasMounted, setHasMounted] = useState(false);
   const [animationClassName, setAnimationClassName] = useState(
@@ -51,7 +53,7 @@ export const TaskCard = ({
   return (
     <li
       suppressHydrationWarning={true}
-      className={`reveal-card card ${animationClassName}`}
+      className={`reveal-card card ${animationClassName} ${className}`}
       style={style}
       id={index === 0 ? "one" : index === 1 ? "two" : "three"}
     >
@@ -61,6 +63,45 @@ export const TaskCard = ({
           <p>{description}</p>
         </div>
         <div className="reveal-card__wrapper__badges">
+          <Tag2 variant="priority" priority={priority as Priority} />
+          {tags && tags.length > 0 && (
+            <Tag2 key={JSON.stringify(tags)} variant="tag" tags={tags} />
+          )}
+        </div>
+      </div>
+    </li>
+  );
+};
+export const SimpleTaskCard = ({
+  title,
+  description,
+  tags,
+  priority,
+  style = undefined,
+  index,
+  className = "",
+}: {
+  title: string;
+  description: string;
+  tags: TagsType;
+  priority: TodoPriority;
+  style?: CSSProperties;
+  index: number;
+  className?: string;
+}) => {
+  return (
+    <li
+      suppressHydrationWarning={true}
+      className={`reveal-card-simple simple-card ${className}`}
+      style={style}
+      id={index === 0 ? "one" : index === 1 ? "two" : "three"}
+    >
+      <div className="reveal-card-simple__wrapper">
+        <div className="reveal-card-simple__wrapper__header">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        <div className="reveal-card-simple__wrapper__badges">
           <Tag2 variant="priority" priority={priority as Priority} />
           {tags && tags.length > 0 && (
             <Tag2 key={JSON.stringify(tags)} variant="tag" tags={tags} />

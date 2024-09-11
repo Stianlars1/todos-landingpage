@@ -15,12 +15,14 @@
 }
 
 .featuresContent {
-  max-width: 64rem;
+  width: 100%;
 }
 .featuresContent .featuresList {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 400px));
   gap: 3rem;
+  margin: 0 auto;
+  place-content: center;
 }
 .featuresContent .featuresList .featureItem {
   display: flex;

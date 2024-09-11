@@ -1,0 +1,430 @@
+@mixin defaultListBase {
+  background-color: light-dark(hsl(var(--white)), hsl(var(--card)));
+
+  backdrop-filter: blur(11px);
+  border: 1px solid hsl(var(--border));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1.5px 2.5px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+@mixin defaultListItemBase {
+  background-color: light-dark(hsl(var(--white)), hsl(var(--card)));
+  color: hsl(var(--foreground));
+  &:not(:last-child) {
+    border-bottom: 1px solid hsl(var(--border));
+  }
+}
+
+.switch {
+  width: 180px;
+
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  position: relative;
+  z-index: 1;
+  transition: all 0.24s ease;
+  margin: 0 auto;
+  // base colors - borders - bgs
+
+  .triggerButton {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    color: light-dark(#55d357, #55d357);
+    font-weight: 600;
+    position: relative;
+    transition: all 0.35s ease;
+    border: 1px solid transparent;
+
+    .menuText {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1.5px;
+        bottom: 0;
+        width: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: light-dark(#55d357, #55d357);
+      }
+    }
+
+    .selectCheckmark {
+      background-color: hsl(var(--foreground));
+      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      rect,
+      path {
+        fill: hsl(var(--background));
+      }
+    }
+  }
+
+  .switchList {
+    border-radius: 0.25rem;
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    right: 4px;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.24s ease;
+
+    @include defaultListBase;
+    overflow: hidden;
+
+    .switchItem {
+      list-style-type: none;
+      margin: 0;
+      padding: 0.4rem 0.8rem;
+      transition: background-color 0.24s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        width: 0.875rem;
+        height: 0.875rem;
+
+        rect,
+        path {
+          fill: hsl(var(--foreground));
+        }
+      }
+
+      @include defaultListItemBase;
+      &:hover {
+        background-color: hsl(var(--muted));
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.filteringWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  .createButton,
+  .learnMorebutton,
+  .settingsButton {
+    padding: 0.35rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 6px;
+
+    svg {
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+  }
+
+  .createButton {
+    background-color: hsl(var(--card));
+
+    // background-color: light-dark(#e2e8f0, #454f61);
+    color: hsl(var(--foreground) / 0.45);
+
+    position: relative;
+    z-index: 1;
+    //opacity: 0.25;
+    mask-image: linear-gradient(to right, transparent -25%, black 110%);
+  }
+
+  .settingsButtonWrapper {
+    position: relative;
+    .settingsButton {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
+      border-color: hsl(var(--border));
+      cursor: pointer;
+      background-color: hsl(var(--card));
+      color: hsl(var(--foreground) / 0.5);
+      &:hover {
+        color: hsl(var(--foreground));
+        background-color: hsl(var(--border));
+      }
+    }
+
+    .settingsMenu {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      z-index: 100;
+      @include defaultListBase;
+
+      .settingsMenuItem {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        text-wrap: nowrap;
+        font-size: 12px;
+        color: hsl(var(--foreground));
+        font-weight: 500;
+
+        .switchButton {
+          background-color: light-dark(
+            hsl(var(--black) / 0.9),
+            hsl(var(--white) / 0.08)
+          );
+        }
+
+        .switchButton input:checked span {
+          background-color: red;
+        }
+      }
+    }
+  }
+
+  .mainButtonWrapper {
+    position: relative;
+    .learnMorebutton {
+      cursor: pointer;
+      z-index: 1;
+
+      color: hsl(var(--foreground) / 0.5);
+      &:hover {
+        color: hsl(var(--foreground));
+        background-color: hsl(var(--border));
+      }
+    }
+
+    .filterList {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 5px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      z-index: 1;
+
+      @include defaultListBase;
+
+      .filterItem {
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+        text-wrap: nowrap;
+        font-size: 12px;
+        color: hsl(var(--white));
+        font-weight: 500;
+
+        color: hsl(var(--foreground));
+      }
+    }
+  }
+  .activeButton {
+    color: hsl(var(--foreground)) !important;
+    background-color: hsl(var(--border)) !important;
+  }
+}
+
+// .cardStack {
+// aspect-ratio: 1;
+// max-width: 100%;
+// max-height: 300px;
+// overflow: hidden;
+// width: 100%;
+// contain: strict;
+// isolation: isolate;
+// background-color: transparent;
+// z-index: -10000;
+
+//   .cardsContainer {
+// width: 100%;
+// height: 100%;
+// perspective: 2000px;
+// perspective-origin: 50%;
+// position: relative;
+// background-color: transparent;
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       inset: 0;
+//       pointer-events: none;
+
+//       background: linear-gradient(
+//           to bottom,
+//           hsl(var(--background)) 20%,
+//           transparent 50%
+//         ),
+//         linear-gradient(to right, transparent 60%, hsl(var(--background)) 100%);
+//     }
+
+//     .cardStackOnlyRevealCard {
+// z-index: 2;
+// pointer-events: all;
+// background-color: hsl(var(--card) / 0.5);
+// backdrop-filter: blur(9px);
+// transition: all 0.28s ease;
+// width: 300px;
+
+// position: absolute;
+// inset: 0;
+// margin: auto;
+// height: fit-content;
+// isolation: isolate;
+// contain: paint;
+// overflow: hidden;
+
+// &:hover {
+//   background-color: hsl(var(--card) / 0.8);
+
+//   --top: -20px !important;
+// }
+//     }
+//   }
+// }
+
+.deadlines {
+  aspect-ratio: 1;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  width: 100%;
+  contain: strict;
+  isolation: isolate;
+  background-color: transparent;
+  z-index: -10000;
+
+  .deadlinesList {
+    width: 100%;
+    height: 100%;
+    perspective: 2000px;
+    perspective-origin: 50%;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    contain: strict;
+    isolation: isolate;
+
+    .deadlinesItem,
+    .summaryItem {
+      z-index: 2;
+      pointer-events: all;
+      background-color: hsl(var(--dashboardBlue) / 0.5);
+      backdrop-filter: blur(9px);
+      transition: all 0.28s ease;
+      width: 150px;
+
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      height: min-content;
+      isolation: isolate;
+      contain: paint;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.5rem;
+      border: 1px solid hsl(var(--foreground) / 0.15);
+
+      &:hover {
+        background-color: hsl(var(--dashboardBlue) / 0.8);
+
+        --top: -5px !important;
+      }
+
+      .deadlinesTitle {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: light-dark(hsl(var(--black) / 0.9), hsl(var(--foreground)));
+      }
+      .deadlinesDescription {
+        font-size: 12px;
+        color: hsl(var(--muted-foreground));
+      }
+    }
+
+    .summaryItem {
+      background-color: transparent;
+      background-color: hsl(var(--muted) / 0);
+      scale: 0.9;
+      color: light-dark(
+        hsl(var(--black) / 0.9),
+        hsl(var(--primary-foreground))
+      );
+
+      &:hover {
+        background-color: transparent;
+        color: light-dark(
+          hsl(var(--white) / 0.9),
+          hsl(var(--primary-foreground))
+        );
+        --top: -10px !important;
+        --opacity: 0.5 !important;
+      }
+    }
+
+    .completed {
+    }
+
+    .deleted {
+    }
+
+    .inProgress {
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filteringWrapper {
+    .settingsButtonWrapper {
+      .settingsMenu {
+      }
+    }
+    .mainButtonWrapper {
+      .filterList {
+      }
+    }
+  }
+}

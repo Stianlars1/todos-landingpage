@@ -17,11 +17,14 @@
 
 // the features section inside the gridSection
 .featuresContent {
-  max-width: 64rem;
+  width: 100%;
+
   .featuresList {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 400px));
     gap: 3rem;
+    margin: 0 auto;
+    place-content: center;
 
     .featureItem {
       display: flex;

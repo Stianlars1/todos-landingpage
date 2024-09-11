@@ -288,7 +288,7 @@
 <path d="M391.11 340.89L397.339 351.678M397.339 351.678L403.567 362.466M397.339 351.678L408.663 348.643M397.339 351.678L385.306 354.902" stroke="white" strokeWidth="3"/>
 </g>
 <defs>
-<filter id="filter0_dddd_9_97" x="-89.6802" y="206.777" width="711.003" height="339.74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_dddd_9_97" x="-89.6802" y="206.777" width="711.003" height="339.74" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-7" dy="-1"/>
@@ -312,7 +312,7 @@
 <feBlend mode="normal" in2="effect3_dropShadow_9_97" result="effect4_dropShadow_9_97"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_9_97" result="shape"/>
 </filter>
-<filter id="filter1_dddd_9_97" x="41.1025" y="227.927" width="749.542" height="360.871" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_dddd_9_97" x="41.1025" y="227.927" width="749.542" height="360.871" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-4" dy="-1"/>
@@ -336,7 +336,7 @@
 <feBlend mode="normal" in2="effect3_dropShadow_9_97" result="effect4_dropShadow_9_97"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_9_97" result="shape"/>
 </filter>
-<filter id="filter2_dddd_9_97" x="38.6924" y="194.303" width="759.213" height="488.604" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter2_dddd_9_97" x="38.6924" y="194.303" width="759.213" height="488.604" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-12" dy="11"/>

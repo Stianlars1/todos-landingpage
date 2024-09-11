@@ -6,5 +6,6 @@ export const phoneNumber = "92689781";
 export const formattedPhoneNumber = "(+47) 926 89 781";
 export const SUB_URL = "https://taskbuddy.dev";
 export const APP_URL_SIGNUP = "https://app.taskbuddy.dev/signup";
-export const APP_URL_LEARN_MORE = "https://taskbuddy.dev/learn-more";
+export const APP_URL_LOGIN = "https://app.taskbuddy.dev/login";
+export const APP_URL_LEARN_MORE = "/learn-more";
 export const iconSize = 20;

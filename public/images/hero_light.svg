@@ -136,7 +136,7 @@
 <path d="M1574.7 51V30.41H1576.67V41.43L1586.76 30.41H1589.26L1581.08 39.342L1589.84 51H1587.46L1579.77 40.792L1576.67 44.156V51H1574.7Z" fill="#020817"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1157.6 38.2784C1157.6 33.487 1161.49 29.6027 1166.28 29.6027C1171.07 29.6027 1174.95 33.487 1174.95 38.2784C1174.95 43.0699 1171.07 46.9541 1166.28 46.9541C1161.49 46.9541 1157.6 43.0699 1157.6 38.2784ZM1166.28 27C1160.05 27 1155 32.0495 1155 38.2784C1155 44.5074 1160.05 49.5568 1166.28 49.5568C1168.92 49.5568 1171.36 48.6459 1173.28 47.1207L1179.24 53.0797L1180.16 54L1182 52.1595L1181.08 51.2394L1175.12 45.2802C1176.65 43.3568 1177.56 40.924 1177.56 38.2784C1177.56 32.0495 1172.51 27 1166.28 27Z" fill="#C8CACD"/>
 <defs>
-<filter id="filter0_d_130_10" x="1217" y="493" width="738" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_130_10" x="1217" y="493" width="738" height="160" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_130_10"/>
@@ -147,7 +147,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_130_10"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_130_10" result="shape"/>
 </filter>
-<filter id="filter1_d_130_10" x="1217" y="340" width="738" height="139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d_130_10" x="1217" y="340" width="738" height="139" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_130_10"/>
@@ -158,7 +158,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_130_10"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_130_10" result="shape"/>
 </filter>
-<filter id="filter2_d_130_10" x="420" y="747.645" width="738" height="182.354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter2_d_130_10" x="420" y="747.645" width="738" height="182.354" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_130_10"/>
@@ -169,7 +169,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_130_10"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_130_10" result="shape"/>
 </filter>
-<filter id="filter3_d_130_10" x="420" y="548.388" width="738" height="182.354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter3_d_130_10" x="420" y="548.388" width="738" height="182.354" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_130_10"/>
@@ -180,7 +180,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_130_10"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_130_10" result="shape"/>
 </filter>
-<filter id="filter4_d_130_10" x="420" y="349.129" width="738" height="182.355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter4_d_130_10" x="420" y="349.129" width="738" height="182.355" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
 <feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_130_10"/>

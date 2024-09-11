@@ -1,5 +1,6 @@
 .gridSection {
-  max-width: calc(var(--max-width) - 300px);
+  //max-width: calc(var(--max-width) - 300px);
+  max-width: var(--max-width);
   padding: 10rem 0 10rem;
   margin: 0 auto;
   overflow-x: visible;
@@ -7,11 +8,10 @@
 
 @media screen and (min-width: 1401px) {
   .gridSection {
-    max-width: none;
     padding: 8rem 0 8rem;
   }
 
   .large {
-    padding: 12rem 0 12rem;
+    padding: 12.5rem 0 10rem;
   }
 }

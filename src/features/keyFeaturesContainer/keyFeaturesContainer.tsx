@@ -24,7 +24,7 @@ export const KeyFeaturesContainer = () => {
     <>
       <SectionWrapper>
         <LightBeam
-          className={styles.lightBeam}
+          className={`${styles.lightBeam} ${styles.lightBeamLoaded}`}
           colorDarkmode="hsl(var(--primary) / 1)"
           colorLightmode="hsl(var(--foreground) / 0.2)"
           fullWidth={0.8}

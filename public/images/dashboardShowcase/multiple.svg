@@ -35,8 +35,8 @@
 <pattern id="pattern0_11_150" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_11_150" transform="matrix(0.00195842 0 0 0.00204918 -0.000377355 0)"/>
 </pattern>
-<filter id="filter0_ddddd_11_150" x="566.382" y="202.036" width="460.841" height="340.703" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_ddddd_11_150" x="566.382" y="202.036" width="460.841" height="340.703" filterUnits="userSpaceOnUse" colorinterpolationfilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-6" dy="5"/>
 <feGaussianBlur stdDeviation="8"/>
@@ -64,8 +64,8 @@
 <feBlend mode="normal" in2="effect4_dropShadow_11_150" result="effect5_dropShadow_11_150"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect5_dropShadow_11_150" result="shape"/>
 </filter>
-<filter id="filter1_ddddd_11_150" x="4" y="43" width="843" height="725" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter1_ddddd_11_150" x="4" y="43" width="843" height="725" filterUnits="userSpaceOnUse" colorinterpolationfilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="10" dy="10"/>
 <feGaussianBlur stdDeviation="15.5"/>
@@ -93,8 +93,8 @@
 <feBlend mode="normal" in2="effect4_dropShadow_11_150" result="effect5_dropShadow_11_150"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect5_dropShadow_11_150" result="shape"/>
 </filter>
-<filter id="filter2_ddddd_11_150" x="603.898" y="538.946" width="529.924" height="549.987" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter2_ddddd_11_150" x="603.898" y="538.946" width="529.924" height="549.987" filterUnits="userSpaceOnUse" colorinterpolationfilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="-8" dy="-3"/>
 <feGaussianBlur stdDeviation="9"/>

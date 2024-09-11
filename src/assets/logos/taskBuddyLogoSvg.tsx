@@ -32,3 +32,37 @@ export const TaskBuddyLogo = ({ className = " " }: { className?: string }) => (
     />
   </svg>
 );
+export const TaskBuddyFooterLogo = ({
+  className = " ",
+}: {
+  className?: string;
+}) => (
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 1004 1004"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    strokeWidth="2"
+    className={`taskbuddyLogo ${className}`}
+  >
+    <path
+      d="M199.926 492.514C169.075 461.663 169.075 411.643 199.926 380.791C230.778 349.94 280.798 349.94 311.649 380.791L365.389 434.532C366.561 435.703 366.561 437.603 365.389 438.774L257.909 546.254C256.738 547.426 254.838 547.426 253.666 546.254L199.926 492.514Z"
+      fill="white"
+    />
+    <rect
+      x="267.102"
+      y="559.689"
+      width="158"
+      height="158"
+      transform="rotate(-45 267.102 559.689)"
+      fill="white"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M971.618 324.273L501.651 794.24L389.928 682.517L888.939 183.506L894.913 189.48C928.015 230.991 953.583 276.533 971.618 324.273Z"
+      fill="white"
+    />
+  </svg>
+);

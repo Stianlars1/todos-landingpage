@@ -1,0 +1,57 @@
+.contactContent {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactInfo,
+.faq,
+.social {
+  padding: 1.5rem;
+  background-color: hsl(var(--card));
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 0.5rem;
+
+    a {
+      color: #0070f3;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.5rem;
+
+    a {
+      font-size: 1.1rem;
+      color: #0070f3;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

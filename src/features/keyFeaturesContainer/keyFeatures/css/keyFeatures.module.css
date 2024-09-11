@@ -16,7 +16,7 @@
 }
 
 .featuresContent {
-  max-width: 64rem;
+  width: 100%;
 }
 .featuresContent .featuresList {
   display: grid;

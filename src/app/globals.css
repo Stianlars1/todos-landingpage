@@ -1,7 +1,7 @@
 html body {
   /* == layout sizes == */
   /* --nav-height: 65px; */
-  --nav-height: 56px;
+  --nav-height: 43px;
   --sidebar-width: 15rem;
   /* --sidebar-width: calc(24px + 3.5rem); */
 
@@ -10,7 +10,7 @@ html body {
   --footer-height: 135px;
 
   /* == utils == */
-  --max-width: 1400px;
+  --max-width: 1280px;
   --border-radius: 12px;
   --radius: 0.5rem;
   --main-padding: calc(2rem + 4px) 64px;
@@ -18,6 +18,8 @@ html body {
   /* == colors == */
   --white: 0 0% 100%;
   --black: 240 10% 3.9%;
+  --success: 88 50% 53%;
+  --activeText: 124 84% 25%;
   --success: 88 50% 53%;
 
   /* == Custom Theme == */
@@ -50,6 +52,9 @@ html body {
   --muted-foreground: 215.4 16.3% 46.9%;
   --accent: 215, 28%, 17%;
   --accent-foreground: 240 6% 94%;
+
+  --warning: 47.9 95.8% 53.1%;
+  --warning-foreground: 26 83.3% 14.1%;
   /* --accent: 210 40% 96.1%;
   --accent-foreground: 222.2 47.4% 11.2%; */
   --destructive: 0 84.2% 60.2%;
@@ -57,6 +62,8 @@ html body {
   --border: 214.3 31.8% 91.4%;
   --input: 0 0% 83%;
   --ring: 221.2 83.2% 53.3%;
+
+  --dashboardBlue: 222 56% 88%;
 }
 
 /* Dark mode */
@@ -84,6 +91,12 @@ html body {
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+
+    --activeText: 88 50% 53%;
+    --dashboardBlue: 217.2 32.6% 17.5%;
+
+    --warning: 47.9 95.8% 53.1%;
+    --warning-foreground: 26 83.3% 14.1%;
   }
 }
 
@@ -114,7 +127,20 @@ body {
   scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
+.imageFadeIn {
+  animation: imageFadeIn 0.5s ease-in-out;
+}
+@keyframes imageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }

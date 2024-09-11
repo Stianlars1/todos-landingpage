@@ -68,6 +68,7 @@
   max-width: 90%;
   font-size: 0.875rem;
   text-wrap: pretty;
+  color: hsl(var(--muted-foreground));
 }
 .content .contentList .contentItem .itemIcon {
   position: absolute;
