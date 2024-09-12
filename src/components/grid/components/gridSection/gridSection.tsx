@@ -7,13 +7,14 @@ export const GridSection = ({
   className = "",
 }: {
   children: ReactElement | ReactElement[] | ReactNode | ReactNode[];
-  size?: "default" | "large";
+  size?: "default" | "large" | "unlimited";
   className?: string;
 }) => {
-  const sizeClass = size === "large" ? styles.large : "";
-  return (
-    <section className={`${styles.gridSection} ${className} ${sizeClass}`}>
-      {children}
-    </section>
-  );
+  const sizeClass =
+    size === "unlimited"
+      ? styles.gridSectionUnlimited
+      : size === "large"
+      ? styles.large
+      : styles.gridSection;
+  return <section className={` ${className} ${sizeClass}`}>{children}</section>;
 };

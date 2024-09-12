@@ -55,4 +55,32 @@
 }
 .social ul li a:hover {
   text-decoration: underline;
+}
+
+.contactContent p {
+  color: hsl(var(--muted-foreground));
+}
+.contactContent .contentItem {
+  background-color: hsl(var(--muted));
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.contactContent .contentItem .list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.contactContent .contentItem .list .listItem {
+  font-size: 0.875rem;
+  list-style-type: none;
+}
+.contactContent .contentItem h2 {
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+}
+.contactContent .contentItem p {
+  font-size: 0.875rem;
 }/*# sourceMappingURL=contactContent.module.css.map */

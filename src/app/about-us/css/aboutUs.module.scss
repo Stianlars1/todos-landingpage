@@ -1,6 +1,3 @@
-.gridSection {
-}
-
 .imageWrapper {
   position: relative;
   max-width: 100%;
@@ -81,6 +78,60 @@
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .imageWrapper {
+    .image {
+      .svg {
+        margin-top: -150px;
+      }
+
+      &::before {
+        content: "";
+        top: -150px;
+        background: linear-gradient(
+          to bottom,
+          hsl(var(--background)) 20%,
+          transparent 25%
+        );
+      }
+    }
+    &::after {
+      content: "";
+      top: -150px;
+    }
+
+    &::before {
+      top: -150px;
+    }
+  }
+}
+@media screen and (max-width: 1999px) {
+  .imageWrapper {
+    .image {
+      .svg {
+        margin-top: -120px;
+      }
+
+      &::before {
+        content: "";
+        top: -120px;
+        background: linear-gradient(
+          to bottom,
+          hsl(var(--background)) 20%,
+          transparent 25%
+        );
+      }
+    }
+    &::after {
+      content: "";
+      top: -120px;
+    }
+
+    &::before {
+      top: -120px;
+    }
+  }
+}
 @media screen and (max-width: 1399px) {
   .imageWrapper {
     .image {

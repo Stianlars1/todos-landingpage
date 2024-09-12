@@ -71,9 +71,33 @@
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .imageContainer {
+    transform: translateY(-170px);
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1999px) {
+  .imageContainer {
+    transform: translateY(-125px);
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1401px) {
+  .imageContainer {
+    max-height: 900px;
+
+    .imageWrapper {
+      .image {
+      }
+    }
+  }
+}
 @media screen and (max-width: 1400px) {
   .imageContainer {
     margin-top: -75px;
+    transform: translateY(0px);
+
     .imageWrapper {
       .image {
       }

@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <>
       <GridContainer>
-        <GridSection size="large">
+        <GridSection size="unlimited">
           <Header />
         </GridSection>
 

@@ -6,12 +6,27 @@
   overflow-x: visible;
 }
 
+.gridSectionUnlimited,
+.large {
+  padding: 12.5rem 0 10rem;
+  max-width: 2000px;
+
+  margin: 0 auto;
+  overflow-x: visible;
+}
+
 @media screen and (min-width: 1401px) {
   .gridSection {
     padding: 8rem 0 8rem;
   }
+}
 
+@media screen and (max-width: 768px) {
+  .gridSection {
+    padding: 6rem 0 6rem;
+  }
+  .gridSectionUnlimited,
   .large {
-    padding: 12.5rem 0 10rem;
+    padding: 8rem 0 8rem;
   }
 }

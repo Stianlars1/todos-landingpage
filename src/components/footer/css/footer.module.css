@@ -69,6 +69,10 @@
 .footer .footerContent .sections .sectionItem .itemList .listItem .link .socialIcon {
   font-size: 1rem;
 }
+.footer .footerContent .sections .sectionItem .itemList .listItem .link:hover {
+  color: hsl(var(--foreground));
+  text-decoration: underline;
+}
 .footer .footerContent .sections .sectionItem .itemList .listItem .active {
   color: hsl(var(--foreground));
   font-weight: 600;

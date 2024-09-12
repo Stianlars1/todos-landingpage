@@ -1,0 +1,82 @@
+.faqSection {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 0;
+  transition: all 2s ease;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+}
+
+.accordionItem {
+  margin-bottom: 1rem;
+  min-width: 100%;
+  z-index: 10000;
+  transition: all 2s ease;
+}
+
+.accordionButton {
+  width: 100%;
+  background-color: hsl(var(--muted));
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: hsl(var(--foreground));
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid hsl(var(--border));
+}
+
+.accordionButton:hover {
+  background-color: hsl(var(--muted) / 0.7);
+}
+
+.arrow {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.accordionContent {
+  background-color: hsl(var(--muted) / 0.7);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 2px 4px hsl(var(--border));
+  margin-top: 0.5rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  overflow: hidden;
+  animation: slideDown 0.3s ease forwards;
+  position: relative;
+  z-index: -100;
+
+  p {
+    background-color: transparent;
+    color: hsl(var(--muted-foreground));
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

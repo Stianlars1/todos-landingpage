@@ -59,6 +59,40 @@
   background: linear-gradient(to right, transparent 70%, hsl(var(--background)) 90%);
 }
 
+@media screen and (min-width: 2000px) {
+  .imageWrapper .image .svg {
+    margin-top: -150px;
+  }
+  .imageWrapper .image::before {
+    content: "";
+    top: -150px;
+    background: linear-gradient(to bottom, hsl(var(--background)) 20%, transparent 25%);
+  }
+  .imageWrapper::after {
+    content: "";
+    top: -150px;
+  }
+  .imageWrapper::before {
+    top: -150px;
+  }
+}
+@media screen and (max-width: 1999px) {
+  .imageWrapper .image .svg {
+    margin-top: -120px;
+  }
+  .imageWrapper .image::before {
+    content: "";
+    top: -120px;
+    background: linear-gradient(to bottom, hsl(var(--background)) 20%, transparent 25%);
+  }
+  .imageWrapper::after {
+    content: "";
+    top: -120px;
+  }
+  .imageWrapper::before {
+    top: -120px;
+  }
+}
 @media screen and (max-width: 1399px) {
   .imageWrapper .image .svg {
     margin-top: -50px;

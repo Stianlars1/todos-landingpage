@@ -145,3 +145,17 @@ body {
     color-scheme: dark;
   }
 }
+
+.linkHref {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  font-size: 0.875rem;
+  list-style-type: none;
+}
+
+.linkHref:hover {
+  text-decoration: underline;
+}
+.linkHref:visited {
+  color: hsl(var(--primary) / 0.6);
+}

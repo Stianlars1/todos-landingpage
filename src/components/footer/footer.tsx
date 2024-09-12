@@ -187,7 +187,8 @@ const Copyright = () => {
             {yearEstablished !== currentYear
               ? `${yearEstablished} - ${currentYear}`
               : currentYear}{" "}
-            Stian Larsen. All rights reserved.
+            Stian Larsen. <br />
+            All rights reserved.
           </p>
         </div>
       </div>

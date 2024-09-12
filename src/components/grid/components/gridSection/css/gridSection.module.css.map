@@ -1,1 +1,1 @@
-{"version":3,"sources":["gridSection.module.scss","gridSection.module.css"],"names":[],"mappings":"AAAA;EAEE,2BAAA;EACA,sBAAA;EACA,cAAA;EACA,mBAAA;ACAF;;ADGA;EACE;IACE,oBAAA;ECAF;EDGA;IACE,wBAAA;ECDF;AACF","file":"gridSection.module.css"}
+{"version":3,"sources":["gridSection.module.scss","gridSection.module.css"],"names":[],"mappings":"AAAA;EAEE,2BAAA;EACA,sBAAA;EACA,cAAA;EACA,mBAAA;ACAF;;ADGA;;EAEE,wBAAA;EACA,iBAAA;EAEA,cAAA;EACA,mBAAA;ACDF;;ADIA;EACE;IACE,oBAAA;ECDF;AACF;ADIA;EACE;IACE,oBAAA;ECFF;EDIA;;IAEE,oBAAA;ECFF;AACF","file":"gridSection.module.css"}

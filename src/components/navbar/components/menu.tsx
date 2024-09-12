@@ -1,4 +1,5 @@
 "use client";
+import { useBrowserInfo } from "@/hooks/useBrowserInfo";
 import { APP_URL_LOGIN, APP_URL_SIGNUP } from "@/utils/constants";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -8,11 +9,11 @@ export const NavbarDesktopMenu = () => {
   return (
     <div className={styles.menu}>
       <ul className={styles.list}>
-        <Link href={"/learn-more"} className={styles.item}>
-          Learn more
-        </Link>
         <Link href={"/about-us"} className={styles.item}>
           About us
+        </Link>
+        <Link href={"/learn-more"} className={styles.item}>
+          Learn more
         </Link>
         <Link href={"/contact"} className={styles.item}>
           Contact
@@ -30,15 +31,18 @@ export const NavbarDesktopMenu = () => {
         </a>
       </div>
 
-      <CiMenuFries
-        className={styles.hamburger}
-        width={16}
-        onClick={toggleNativeMenu}
-      />
+      <button className={styles.hamburgerWrapper} onClick={toggleNativeMenu}>
+        <CiMenuFries className={styles.hamburger} width={16} />
+      </button>
     </div>
   );
 };
 export const NavbarNativeMenu = () => {
+  const { isMobile } = useBrowserInfo();
+  const spanClass = isMobile ? styles.mobileHoverItem : styles.hoverItem;
+  const linkClass = isMobile
+    ? `${styles.nativeMobileItem} ${styles.nativeItem}`
+    : styles.nativeItem;
   return (
     <>
       <div className={styles.nativeMenu}>
@@ -46,26 +50,35 @@ export const NavbarNativeMenu = () => {
           <Link
             href={"/learn-more"}
             onClick={toggleNativeMenu}
-            className={styles.nativeItem}
+            className={linkClass}
             style={{ animationDelay: "0.25s" }}
           >
             Learn more
+            <span className={spanClass}>
+              Explore TaskBuddy&apos;s key features
+            </span>
           </Link>
+
           <Link
             href={"/about-us"}
-            className={styles.nativeItem}
+            className={linkClass}
             style={{ animationDelay: "0.5s" }}
             onClick={toggleNativeMenu}
           >
             About us
+            <span className={spanClass}>Learn our story and values</span>
           </Link>
+
           <Link
             href={"/contact"}
-            className={styles.nativeItem}
+            className={linkClass}
             style={{ animationDelay: "0.75s" }}
             onClick={toggleNativeMenu}
           >
             Contact
+            <span className={spanClass}>
+              Reach out for support or inquiries
+            </span>
           </Link>
         </ul>
       </div>

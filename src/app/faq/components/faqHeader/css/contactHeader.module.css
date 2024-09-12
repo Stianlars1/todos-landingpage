@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.header h1 {
+  font-size: 2.5rem;
+  color: hsl(var(--foreground));
+  margin: 0;
+  line-height: 1;
+  text-wrap: balance;
+}
+.header p {
+  font-size: 1rem;
+  color: hsl(var(--foreground)/0.7);
+  font-weight: 500;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 16px;
+  text-wrap: pretty;
+}/*# sourceMappingURL=contactHeader.module.css.map */

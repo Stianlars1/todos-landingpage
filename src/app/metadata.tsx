@@ -1,10 +1,10 @@
 import { SUB_URL } from "@/utils/constants";
 import { Metadata } from "next";
 
-export const mainPageMeta: Metadata = {
-  title: "TaskBuddy - Create and structure your daily tasks",
+export const metadata: Metadata = {
+  title: "Effortless Task Management with TaskBuddy",
   description:
-    "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",
+    "TaskBuddy helps streamline your workflow with powerful task management tools. Create, organize, and complete tasks effortlessly.",
   keywords: [
     "todo",
     "create todo",
@@ -16,7 +16,13 @@ export const mainPageMeta: Metadata = {
     "tasks",
     "create tasks online",
     "online task",
+    "TaskBuddy",
+    "task management",
+    "productivity",
+    "dashboards",
+    "task tracking",
   ],
+
   creator: "Stian Larsen",
   publisher: "Stian Larsen",
   metadataBase: new URL(SUB_URL),
@@ -24,9 +30,11 @@ export const mainPageMeta: Metadata = {
   openGraph: {
     type: "website",
     url: SUB_URL,
-    title: "TaskBuddy",
+    title: "Effortless Task Management with TaskBuddy",
     description:
-      "This is the landing page for taskbuddy, an online web tool for creating and structuring your daily tasks.",
+      "Boost your productivity with TaskBuddy - the ultimate task management app.",
+    siteName: "TaskBuddy",
+
     images: [
       {
         url: `${SUB_URL}/android-chrome-512x512.png`,
@@ -41,7 +49,6 @@ export const mainPageMeta: Metadata = {
         alt: "TaskBuddy logo",
       },
     ],
-    siteName: "TaskBuddy.dev",
   },
   twitter: {
     card: "app",
@@ -83,5 +90,3 @@ export const mainPageMeta: Metadata = {
     },
   },
 };
-
-export const metadata: Metadata = mainPageMeta;

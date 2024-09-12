@@ -1,5 +1,4 @@
 "use client";
-import { Tag } from "@/components/ui/tag/tag";
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
 import { APP_URL_LEARN_MORE, APP_URL_SIGNUP } from "@/utils/constants";
 import { BorderBeam } from "@stianlarsen/border-beam";
@@ -32,14 +31,6 @@ export const Header = () => {
               imageLoaded ? styles.focusLoaded : ""
             }`}
           >
-            <Tag
-              backgroundHEX={"#FFC107"}
-              textColorHEX={"#000"}
-              className={styles.tag}
-              width={"fit-content"}
-            >
-              ⚠ Under construction
-            </Tag>
             <h1 className={Libre.className}>
               <FadedWords
                 delay={0}
