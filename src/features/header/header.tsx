@@ -35,9 +35,9 @@ export const Header = () => {
               <FadedWords
                 delay={0}
                 duration={1}
-                words="Effortless Task Management with TaskBuddy"
                 variant="up"
                 scaleSize={1.1}
+                words="Effortless Task Management with TaskBuddy"
               />
             </h1>
             <div className={`${Libre.className} ${styles.description}`}>
