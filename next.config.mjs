@@ -14,11 +14,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "taskbuddy.dev",
+        hostname: "*taskbuddy.dev",
         port: "",
       },
     ],
   },
+  reactCompiler: true,
 };
 
 export default nextConfig;

@@ -1,11 +1,12 @@
 // "use client";
-import { GridSection } from "@/components/grid/components/gridSection/gridSection";
-import { GridContainer } from "@/components/grid/components/gridcontainer/gridcontainer";
-import { SectionHeader } from "@/components/sectionHeader/sectionHeader";
-import type { Metadata, Viewport } from "next";
-import { DashboardsSVG } from "./assets/dashboardsSVG";
-import { AboutUsContent } from "./components/aboutUs/aboutUsContent";
+import {GridSection} from "@/components/grid/components/gridSection/gridSection";
+import {GridContainer} from "@/components/grid/components/gridcontainer/gridcontainer";
+import {SectionHeader} from "@/components/sectionHeader/sectionHeader";
+import type {Metadata, Viewport} from "next";
+import {DashboardsSVG} from "./assets/dashboardsSVG";
+import {AboutUsContent} from "./components/aboutUs/aboutUsContent";
 import styles from "./css/aboutUs.module.css";
+
 
 export const viewport: Viewport = {
   themeColor: [
