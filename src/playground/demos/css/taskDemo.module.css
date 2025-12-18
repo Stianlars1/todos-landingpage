@@ -4,7 +4,7 @@
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   -moz-column-gap: 1.2rem;
-       column-gap: 1.2rem;
+  column-gap: 1.2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -14,4 +14,4 @@
     grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
     row-gap: 1.2rem;
   }
-}/*# sourceMappingURL=taskDemo.module.css.map */
+} /*# sourceMappingURL=taskDemo.module.css.map */

@@ -27,7 +27,9 @@
   border-radius: var(--radius);
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)),
+    var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
   border: 1px solid hsl(var(--border));
   list-style-type: none;
   overflow: hidden;
@@ -51,7 +53,11 @@
   font-weight: 700;
   margin-bottom: 10px;
   color: hsl(var(--foreground));
-  background: linear-gradient(to top, hsl(var(--foreground)/0.5), hsl(var(--foreground)));
+  background: linear-gradient(
+    to top,
+    hsl(var(--foreground) / 0.5),
+    hsl(var(--foreground))
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -59,7 +65,7 @@
   font-size: 1em;
   margin-bottom: 20px;
   font-weight: 400;
-  color: hsl(var(--foreground)/0.85);
+  color: hsl(var(--foreground) / 0.85);
 }
 .content .benefitList .benefitItem .bulletPointsList {
   display: flex;
@@ -75,7 +81,8 @@
   list-style-type: none;
   color: hsl(var(--foreground));
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .benefitItem .bulletPointsList .bulletPoint svg {
     fill: white;
   }
@@ -96,7 +103,12 @@
 .content .benefitList .benefitItem .itemContent .animationWrapper .animation {
   opacity: 0.95;
 }
-.content .benefitList .benefitItem .itemContent .animationWrapper .boostAnimation {
+.content
+  .benefitList
+  .benefitItem
+  .itemContent
+  .animationWrapper
+  .boostAnimation {
   overflow: hidden;
   position: absolute;
   height: 100%;
@@ -105,136 +117,231 @@
   opacity: 0.2;
 }
 @media screen and (max-width: 768px) {
-  .content .benefitList .benefitItem .itemContent .animationWrapper .boostAnimation {
+  .content
+    .benefitList
+    .benefitItem
+    .itemContent
+    .animationWrapper
+    .boostAnimation {
     left: 25%;
     bottom: calc(0% - 50px);
   }
 }
 .content .benefitList .item0 {
-  grid-column: 1/span 4;
-  grid-row: 1/span 2;
-  background-image: linear-gradient(to left bottom, #2563eb -50%, hsl(var(--muted)) 70%);
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+  background-image: linear-gradient(
+    to left bottom,
+    #2563eb -50%,
+    hsl(var(--muted)) 70%
+  );
   display: flex;
   flex-direction: row;
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item0 {
-    background-image: linear-gradient(-50deg, #2563eb -250%, hsl(var(--black)) 100%);
+    background-image: linear-gradient(
+      -50deg,
+      #2563eb -250%,
+      hsl(var(--black)) 100%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item0 {
-    background-image: linear-gradient(to left bottom, #2563eb -150%, hsl(var(--muted)) 100%);
+    background-image: linear-gradient(
+      to left bottom,
+      #2563eb -150%,
+      hsl(var(--muted)) 100%
+    );
     grid-area: item0;
-    grid-column: 1/span 2;
-    grid-row: 1/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
   }
 }
-@media screen and (max-width: 768px) and (prefers-color-scheme: dark), screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark),
+  screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item0 {
-    background-image: linear-gradient(to left bottom, #2563eb -150%, hsl(var(--black)) 100%);
+    background-image: linear-gradient(
+      to left bottom,
+      #2563eb -150%,
+      hsl(var(--black)) 100%
+    );
   }
 }
 .content .benefitList .item1 {
-  grid-column: 5/span 2;
-  grid-row: 1/span 2;
-  background-image: linear-gradient(to right bottom, #2563eb -50%, hsl(var(--muted)) 70%);
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 2;
+  background-image: linear-gradient(
+    to right bottom,
+    #2563eb -50%,
+    hsl(var(--muted)) 70%
+  );
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item1 {
-    background-image: linear-gradient(to right bottom, #2563eb -70%, hsl(var(--black)) 70%);
+    background-image: linear-gradient(
+      to right bottom,
+      #2563eb -70%,
+      hsl(var(--black)) 70%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item1 {
-    background-image: linear-gradient(-70deg, #2563eb -50%, hsl(var(--muted)) 100%);
+    background-image: linear-gradient(
+      -70deg,
+      #2563eb -50%,
+      hsl(var(--muted)) 100%
+    );
     grid-area: item1;
-    grid-column: 1/span 2;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
   }
 }
-@media screen and (max-width: 768px) and (prefers-color-scheme: dark), screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark),
+  screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item1 {
-    background-image: linear-gradient(-70deg, #2563eb -50%, hsl(var(--black)) 100%);
+    background-image: linear-gradient(
+      -70deg,
+      #2563eb -50%,
+      hsl(var(--black)) 100%
+    );
   }
 }
 .content .benefitList .item2 {
-  grid-column: 1/span 3;
-  grid-row: 3/span 1;
-  background-image: linear-gradient(to left top, #2563eb -50%, hsl(var(--muted)) 70%);
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
+  background-image: linear-gradient(
+    to left top,
+    #2563eb -50%,
+    hsl(var(--muted)) 70%
+  );
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item2 {
-    background-image: linear-gradient(to left top, #2563eb -50%, hsl(var(--black)) 70%);
+    background-image: linear-gradient(
+      to left top,
+      #2563eb -50%,
+      hsl(var(--black)) 70%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item2 {
-    background-image: linear-gradient(-90deg, #2563eb -75%, hsl(var(--muted)) 120%);
+    background-image: linear-gradient(
+      -90deg,
+      #2563eb -75%,
+      hsl(var(--muted)) 120%
+    );
     grid-area: item2;
-    grid-column: 1/span 2;
-    grid-row: 3/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
   }
 }
-@media screen and (max-width: 768px) and (prefers-color-scheme: dark), screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark),
+  screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item2 {
-    background-image: linear-gradient(-90deg, #2563eb -75%, hsl(var(--black)) 120%);
+    background-image: linear-gradient(
+      -90deg,
+      #2563eb -75%,
+      hsl(var(--black)) 120%
+    );
   }
 }
 .content .benefitList .item3 {
-  grid-column: 4/span 3;
-  grid-row: 3/span 1;
-  background-image: linear-gradient(115deg, #2563eb -50%, hsl(var(--muted)) 50%);
+  grid-column: 4 / span 3;
+  grid-row: 3 / span 1;
+  background-image: linear-gradient(
+    115deg,
+    #2563eb -50%,
+    hsl(var(--muted)) 50%
+  );
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item3 {
-    background-image: linear-gradient(115deg, #2563eb -50%, hsl(var(--black)) 50%);
+    background-image: linear-gradient(
+      115deg,
+      #2563eb -50%,
+      hsl(var(--black)) 50%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item3 {
-    background-image: linear-gradient(-90deg, #2563eb -75%, hsl(var(--muted)) 170%);
+    background-image: linear-gradient(
+      -90deg,
+      #2563eb -75%,
+      hsl(var(--muted)) 170%
+    );
     grid-area: item3;
-    grid-column: 1/span 2;
-    grid-row: 4/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
   }
 }
-@media screen and (max-width: 768px) and (prefers-color-scheme: dark), screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark),
+  screen and (max-width: 768px) and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item3 {
-    background-image: linear-gradient(-90deg, #2563eb -75%, hsl(var(--black)) 170%);
+    background-image: linear-gradient(
+      -90deg,
+      #2563eb -75%,
+      hsl(var(--black)) 170%
+    );
   }
 }
 .content .benefitList .item4 {
-  grid-column: 1/span 2;
-  grid-row: 4/span 1;
-  background-image: linear-gradient(115deg, #2563eb -50%, hsl(var(--muted)) 100%);
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+  background-image: linear-gradient(
+    115deg,
+    #2563eb -50%,
+    hsl(var(--muted)) 100%
+  );
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item4 {
-    background-image: linear-gradient(115deg, #2563eb -50%, hsl(var(--black)) 100%);
+    background-image: linear-gradient(
+      115deg,
+      #2563eb -50%,
+      hsl(var(--black)) 100%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item4 {
     grid-area: item4;
-    grid-column: 1/span 2;
-    grid-row: 5/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
   }
 }
 .content .benefitList .item5 {
-  grid-column: 3/span 4;
-  grid-row: 4/span 1;
-  background-image: linear-gradient(to bottom left, #2563eb -100%, hsl(var(--muted)) 70%);
+  grid-column: 3 / span 4;
+  grid-row: 4 / span 1;
+  background-image: linear-gradient(
+    to bottom left,
+    #2563eb -100%,
+    hsl(var(--muted)) 70%
+  );
 }
-@media screen and (prefers-color-scheme: dark), screen and (-webkit-prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark),
+  screen and (-webkit-prefers-color-scheme: dark) {
   .content .benefitList .item5 {
-    background-image: linear-gradient(to bottom left, #2563eb -100%, hsl(var(--black)) 70%);
+    background-image: linear-gradient(
+      to bottom left,
+      #2563eb -100%,
+      hsl(var(--black)) 70%
+    );
   }
 }
 @media (max-width: 768px) {
   .content .benefitList .item5 {
     grid-area: item5;
-    grid-column: 1/span 2;
-    grid-row: 6/span 1;
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
   }
-}/*# sourceMappingURL=benefits.module.css.map */
+} /*# sourceMappingURL=benefits.module.css.map */

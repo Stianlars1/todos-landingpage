@@ -81,9 +81,12 @@
           border: 1px solid hsl(var(--border));
           border-radius: 0.5rem;
 
-          transition: opacity 0.75s 0.35s ease, transform 0.75s 0.35s ease;
+          transition:
+            opacity 0.75s 0.35s ease,
+            transform 0.75s 0.35s ease;
 
-          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03),
+          box-shadow:
+            0 -2px 5px rgba(0, 0, 0, 0.03),
             /* Top shadow */ 0 2px 5px rgba(0, 0, 0, 0.03),
             /* Bottom shadow */ -2px 0 5px rgba(0, 0, 0, 0.03),
             /* Left shadow */ 2px 0 5px rgba(0, 0, 0, 0.03);

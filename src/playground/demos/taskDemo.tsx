@@ -10,7 +10,7 @@ import { COLUMN_GROUP } from "./utils";
 
 export const TaskDemo = () => {
   const columnsList: ColumnListDND[] = Object.entries(
-    demoMockCategorizedTodos
+    demoMockCategorizedTodos,
   ).map(([categoryString, todosList]) => {
     let flatTasks: TodoDTO[] = [];
 
@@ -34,7 +34,7 @@ export const TaskDemo = () => {
       name: "ColumnsListWrapper",
       plugins: [animations({ duration: 150 })],
       sortable: true,
-    }
+    },
   );
   return (
     <>

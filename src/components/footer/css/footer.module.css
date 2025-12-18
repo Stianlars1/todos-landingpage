@@ -4,7 +4,7 @@
   background-color: transparent;
   text-align: center;
   font-family: Arial, sans-serif;
-  background-color: hsl(var(--muted)/0.2);
+  background-color: hsl(var(--muted) / 0.2);
   color: hsl(var(--muted-foreground));
   min-width: 100%;
   height: -moz-fit-content;
@@ -42,7 +42,7 @@
   min-width: min(200px, 100%);
 }
 .footer .footerContent .sections .sectionItem .heading3 {
-  color: hsl(var(--foreground)/0.8);
+  color: hsl(var(--foreground) / 0.8);
   font-size: 14px;
   margin: 0;
   line-height: 1.5rem;
@@ -66,7 +66,14 @@
   font-size: 14px;
   text-decoration: none;
 }
-.footer .footerContent .sections .sectionItem .itemList .listItem .link .socialIcon {
+.footer
+  .footerContent
+  .sections
+  .sectionItem
+  .itemList
+  .listItem
+  .link
+  .socialIcon {
   font-size: 1rem;
 }
 .footer .footerContent .sections .sectionItem .itemList .listItem .link:hover {
@@ -160,4 +167,4 @@
     margin-bottom: 0;
     display: block;
   }
-}/*# sourceMappingURL=footer.module.css.map */
+} /*# sourceMappingURL=footer.module.css.map */

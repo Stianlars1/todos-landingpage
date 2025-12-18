@@ -86,7 +86,7 @@
 }
 .concludingMessage a:hover {
   text-decoration: none;
-  background-color: hsl(var(--primary)/0.75);
+  background-color: hsl(var(--primary) / 0.75);
 }
 .concludingMessage::after {
   content: "";
@@ -108,4 +108,4 @@
   .featuresContent .featuresList {
     grid-template-columns: 1fr;
   }
-}/*# sourceMappingURL=features.module.css.map */
+} /*# sourceMappingURL=features.module.css.map */

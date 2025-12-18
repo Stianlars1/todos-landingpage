@@ -27,7 +27,7 @@ export const useIsDarkmodeActive = () => {
 };
 export const useIsDarkmode = () => {
   const [isDarkmodeSimple, setIsDarkmodeActive] = useState<boolean | null>(
-    null
+    null,
   );
 
   useEffect(() => {
@@ -37,8 +37,7 @@ export const useIsDarkmode = () => {
       setIsDarkmodeActive(matchMedia.matches);
     };
 
-    // Set the initial value
-    setIsDarkmodeActive(matchMedia.matches);
+    handleChange();
 
     // Listen for changes
     matchMedia.addEventListener("change", handleChange);

@@ -1,6 +1,6 @@
 .sectionHeader p {
   position: relative;
-  color: hsl(var(--foreground)/0.9) !important;
+  color: hsl(var(--foreground) / 0.9) !important;
 }
 
 .lightBeam {
@@ -31,7 +31,9 @@
   justify-content: flex-start;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)),
+    var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
   color: hsl(var(--card-foreground));
   background-color: hsl(var(--card));
   border-radius: var(--radius);
@@ -47,7 +49,7 @@
   position: absolute;
   z-index: -10;
   opacity: 1;
-  background-color: hsl(var(--muted)/0.04);
+  background-color: hsl(var(--muted) / 0.04);
   overflow: visible;
   top: 0px;
   bottom: 0px;
@@ -92,7 +94,7 @@
   height: 35px;
 }
 .content .contentList .contentItemAnimationEven::after {
-  background-color: hsl(var(--muted)/0.05);
+  background-color: hsl(var(--muted) / 0.05);
   animation: blingFadeEven 2s 0.25s ease-in-out;
 }
 .content .contentList .contentItemAnimationOdd::after {
@@ -125,4 +127,4 @@
     left: 100%;
     right: 0;
   }
-}/*# sourceMappingURL=howItWorks.module.css.map */
+} /*# sourceMappingURL=howItWorks.module.css.map */

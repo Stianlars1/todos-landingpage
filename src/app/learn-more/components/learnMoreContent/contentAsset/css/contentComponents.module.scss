@@ -5,8 +5,9 @@
   border: 1px solid hsl(var(--border));
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1.5px 2.5px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
 }
 @mixin defaultListItemBase {
   background-color: light-dark(hsl(var(--white)), hsl(var(--card)));

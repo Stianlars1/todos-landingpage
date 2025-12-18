@@ -105,7 +105,7 @@
   text-decoration: none;
 }
 .learnMoreContent .section .linkHref:visited {
-  color: hsl(var(--foreground)/0.6);
+  color: hsl(var(--foreground) / 0.6);
 }
 .learnMoreContent .section .linkHref:hover {
   text-decoration: underline;
@@ -193,4 +193,4 @@
     width: 100%;
     margin-bottom: 1rem;
   }
-}/*# sourceMappingURL=learnMoreContent.module.css.map */
+} /*# sourceMappingURL=learnMoreContent.module.css.map */

@@ -25,7 +25,7 @@ export const TaskCard = ({
 }) => {
   const [hasMounted, setHasMounted] = useState(false);
   const [animationClassName, setAnimationClassName] = useState(
-    getInitialAnimationClassname(index)
+    getInitialAnimationClassname(index),
   );
 
   useEffect(() => {

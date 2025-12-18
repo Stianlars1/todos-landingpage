@@ -14,7 +14,7 @@ export const GridSection = ({
     size === "unlimited"
       ? styles.gridSectionUnlimited
       : size === "large"
-      ? styles.large
-      : styles.gridSection;
+        ? styles.large
+        : styles.gridSection;
   return <section className={` ${className} ${sizeClass}`}>{children}</section>;
 };

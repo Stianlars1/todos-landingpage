@@ -1,4 +1,5 @@
 import { SUB_URL } from "@/utils/constants";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Effortless Task Management with TaskBuddy",

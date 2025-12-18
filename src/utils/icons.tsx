@@ -195,7 +195,7 @@ export const IconFilter = ({ className = " " }: { className?: string }) => {
 };
 export const IconChevron = (
   props: SVGProps<SVGSVGElement>,
-  { className = " " }: { className?: string }
+  { className = " " }: { className?: string },
 ) => {
   return (
     <svg

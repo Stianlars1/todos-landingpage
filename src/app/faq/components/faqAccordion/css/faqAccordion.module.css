@@ -39,7 +39,7 @@
 }
 
 .accordionButton:hover {
-  background-color: hsl(var(--muted)/0.7);
+  background-color: hsl(var(--muted) / 0.7);
 }
 
 .arrow {
@@ -48,7 +48,7 @@
 }
 
 .accordionContent {
-  background-color: hsl(var(--muted)/0.7);
+  background-color: hsl(var(--muted) / 0.7);
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid hsl(var(--border));
@@ -78,4 +78,4 @@
     transform: translateY(0);
     opacity: 1;
   }
-}/*# sourceMappingURL=faqAccordion.module.css.map */
+} /*# sourceMappingURL=faqAccordion.module.css.map */

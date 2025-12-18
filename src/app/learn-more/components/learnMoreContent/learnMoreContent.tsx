@@ -58,12 +58,12 @@ export const LearnMoreContent = () => {
                         index === 2
                           ? styles.dragWrapper
                           : index === 3
-                          ? `${styles.cardIllustration} ${styles.cardFader}`
-                          : ""
+                            ? `${styles.cardIllustration} ${styles.cardFader}`
+                            : ""
                       }`}
                     >
                       {item.Illustration(
-                        index === 2 ? styles.cardIllustration : ""
+                        index === 2 ? styles.cardIllustration : "",
                       )}
                     </figure>
                   )}

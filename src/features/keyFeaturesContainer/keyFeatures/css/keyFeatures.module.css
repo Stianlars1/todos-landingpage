@@ -54,12 +54,21 @@
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-.featuresContent .featuresList .featureItem .featureHeader .featureItemTitle .customIcon {
+.featuresContent
+  .featuresList
+  .featureItem
+  .featureHeader
+  .featureItemTitle
+  .customIcon {
   color: hsl(var(--foreground));
   width: 20px;
   height: 20px;
 }
-.featuresContent .featuresList .featureItem .featureHeader .featureItemDescription {
+.featuresContent
+  .featuresList
+  .featureItem
+  .featureHeader
+  .featureItemDescription {
   font-size: 1rem;
   color: hsl(var(--muted-foreground));
   text-wrap: pretty;
@@ -71,8 +80,14 @@
   height: auto;
   border: 1px solid hsl(var(--border));
   border-radius: 0.5rem;
-  transition: opacity 0.75s 0.35s ease, transform 0.75s 0.35s ease;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03), 0 2px 5px rgba(0, 0, 0, 0.03), -2px 0 5px rgba(0, 0, 0, 0.03), 2px 0 5px rgba(0, 0, 0, 0.03);
+  transition:
+    opacity 0.75s 0.35s ease,
+    transform 0.75s 0.35s ease;
+  box-shadow:
+    0 -2px 5px rgba(0, 0, 0, 0.03),
+    0 2px 5px rgba(0, 0, 0, 0.03),
+    -2px 0 5px rgba(0, 0, 0, 0.03),
+    2px 0 5px rgba(0, 0, 0, 0.03);
 }
 
 .concludingMessage {
@@ -105,7 +120,7 @@
 }
 .concludingMessage a:hover {
   text-decoration: none;
-  background-color: hsl(var(--primary)/0.75);
+  background-color: hsl(var(--primary) / 0.75);
 }
 .concludingMessage::after {
   content: "";
@@ -158,8 +173,12 @@
   .featuresContent .featuresList .featureItem .featureHeader .featureItemTitle {
     justify-content: flex-start;
   }
-  .featuresContent .featuresList .featureItem .featureHeader .featureItemDescription {
+  .featuresContent
+    .featuresList
+    .featureItem
+    .featureHeader
+    .featureItemDescription {
     text-align: left;
     text-wrap: pretty;
   }
-}/*# sourceMappingURL=keyFeatures.module.css.map */
+} /*# sourceMappingURL=keyFeatures.module.css.map */

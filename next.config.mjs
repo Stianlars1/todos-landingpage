@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    dangerouslyAllowLocalIP: true,
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -14,12 +16,24 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*taskbuddy.dev",
+        hostname: "taskbuddy.dev",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "*.taskbuddy.dev",
         port: "",
       },
     ],
   },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "200mb",
+    },
+    viewTransition: true,
+  },
   reactCompiler: true,
+  reactStrictMode: true
 };
 
 export default nextConfig;

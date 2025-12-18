@@ -2,13 +2,14 @@
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
 import { APP_URL_LEARN_MORE, APP_URL_SIGNUP } from "@/utils/constants";
 import { BorderBeam } from "@stianlarsen/border-beam";
-import { FadedWords } from "@stianlarsen/react-fade-effects";
+
 import { Libre_Franklin } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { TaskBuddyLandingSVGDark } from "./assets/taskBuddyLandingSVGDark";
 import { TaskBuddyLandingSVGLight } from "./assets/taskBuddyLandingSVGLight";
 import styles from "./css/header.module.css";
+import { FadedWords } from "@stianlarsen/react-fade-effects";
 
 const Libre = Libre_Franklin({ subsets: ["latin"] });
 

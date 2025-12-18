@@ -16,11 +16,11 @@
 .menu .list .item {
   font-size: 12.8px;
   text-decoration: none;
-  color: hsl(var(--foreground)/0.6);
+  color: hsl(var(--foreground) / 0.6);
   transition: color 0.157s ease;
 }
 .menu .list .item:hover {
-  color: hsl(var(--foreground)/1);
+  color: hsl(var(--foreground) / 1);
 }
 .menu .CTA {
   display: flex;
@@ -32,7 +32,7 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  color: hsl(var(--foreground)/0.6);
+  color: hsl(var(--foreground) / 0.6);
   border-radius: 4px;
   transition: all 0.24s ease;
   will-change: auto;
@@ -41,7 +41,7 @@
   text-decoration: none;
 }
 .menu .CTA .button:hover {
-  color: hsl(var(--foreground)/1);
+  color: hsl(var(--foreground) / 1);
 }
 .menu .CTA .signUp {
   border-color: hsl(var(--border));
@@ -51,21 +51,21 @@
   color: light-dark(hsl(var(--white)), hsl(var(--foreground)));
 }
 .menu .CTA .login:hover {
-  border-color: hsl(var(--foreground)/0.8);
+  border-color: hsl(var(--foreground) / 0.8);
 }
 
-[data-nav-open=false] .nativeMenu {
+[data-nav-open="false"] .nativeMenu {
   display: none;
 }
 
-[data-nav-open=true] .nativeMenu {
+[data-nav-open="true"] .nativeMenu {
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: transparent;
   min-width: 100%;
 }
-[data-nav-open=true] .nativeMenu .nativeList {
+[data-nav-open="true"] .nativeMenu .nativeList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -73,26 +73,26 @@
   min-width: 100%;
   padding: 2rem 0;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeItem {
+[data-nav-open="true"] .nativeMenu .nativeList .nativeItem {
   min-width: 100%;
   padding: 1rem 1.5rem;
   transform: translateY(-20px);
   opacity: 0;
   animation: itemTransition 0.6s ease forwards;
   transition: margin-left 0.24s ease;
-  color: hsl(var(--foreground)/0.6);
+  color: hsl(var(--foreground) / 0.6);
   background-color: transparent;
   text-decoration: none;
   position: relative;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeItem .hoverItem {
+[data-nav-open="true"] .nativeMenu .nativeList .nativeItem .hoverItem {
   display: none;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeItem:hover {
-  color: hsl(var(--foreground)/1);
+[data-nav-open="true"] .nativeMenu .nativeList .nativeItem:hover {
+  color: hsl(var(--foreground) / 1);
   margin-left: 5px;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeItem:hover .hoverItem {
+[data-nav-open="true"] .nativeMenu .nativeList .nativeItem:hover .hoverItem {
   display: flex;
   font-size: 12px;
   color: hsl(var(--muted-foreground));
@@ -102,7 +102,7 @@
   opacity: 0;
   animation: slideInItem 0.15s 0.15s ease forwards;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeItem .mobileHoverItem {
+[data-nav-open="true"] .nativeMenu .nativeList .nativeItem .mobileHoverItem {
   display: flex;
   font-size: 12px;
   color: hsl(var(--muted-foreground));
@@ -112,17 +112,17 @@
   opacity: 0;
   animation: slideInItem 0.15s 0.15s ease forwards;
 }
-[data-nav-open=true] .nativeMenu .nativeList .nativeMobileItem {
+[data-nav-open="true"] .nativeMenu .nativeList .nativeMobileItem {
   color: hsl(var(--foreground));
 }
-[data-nav-open=true] .nativeBackdrop {
+[data-nav-open="true"] .nativeBackdrop {
   position: fixed;
   inset: 0;
-  background-color: hsl(var(--card)/0.5);
+  background-color: hsl(var(--card) / 0.5);
   z-index: 1;
 }
 @media screen and (min-width: 601px) {
-  [data-nav-open=true] .nativeMenu {
+  [data-nav-open="true"] .nativeMenu {
     display: none;
   }
 }
@@ -183,23 +183,23 @@
     display: flex;
     align-self: center;
     cursor: pointer;
-    color: hsl(var(--foreground)/0.6);
-    stroke: hsl(var(--foreground)/0.6);
+    color: hsl(var(--foreground) / 0.6);
+    stroke: hsl(var(--foreground) / 0.6);
     position: relative;
     stroke-width: 0.5px;
     transition: all 0.24s ease;
   }
-  [data-nav-open=true] .menu .hamburgerWrapper .hamburger {
-    color: hsl(var(--foreground)/1);
+  [data-nav-open="true"] .menu .hamburgerWrapper .hamburger {
+    color: hsl(var(--foreground) / 1);
   }
   .menu .hamburgerWrapper:hover .hamburger {
-    color: hsl(var(--foreground)/1);
-    stroke: hsl(var(--foreground)/1);
+    color: hsl(var(--foreground) / 1);
+    stroke: hsl(var(--foreground) / 1);
     stroke-width: 1px;
   }
   .menu .hamburgerWrapper:active .hamburger {
     transform: scale(0.95);
-    color: hsl(var(--foreground)/1);
+    color: hsl(var(--foreground) / 1);
   }
   .menu .list {
     display: none;
@@ -214,4 +214,4 @@
     transform: translateX(0px);
     opacity: 1;
   }
-}/*# sourceMappingURL=menu.module.css.map */
+} /*# sourceMappingURL=menu.module.css.map */

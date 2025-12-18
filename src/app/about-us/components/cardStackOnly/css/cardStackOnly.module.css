@@ -25,14 +25,16 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom, hsl(var(--background)) 20%, transparent 50%), linear-gradient(to right, transparent 60%, hsl(var(--background)) 100%);
+  background:
+    linear-gradient(to bottom, hsl(var(--background)) 20%, transparent 50%),
+    linear-gradient(to right, transparent 60%, hsl(var(--background)) 100%);
 }
 .cardStack .cardsContainer .cardStackOnlyRevealCard {
   z-index: 2;
   pointer-events: all;
-  background-color: hsl(var(--card)/0.5);
+  background-color: hsl(var(--card) / 0.5);
   -webkit-backdrop-filter: blur(9px);
-          backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
   transition: all 0.28s ease;
   width: 300px;
   position: absolute;
@@ -45,7 +47,7 @@
   overflow: hidden;
 }
 .cardStack .cardsContainer .cardStackOnlyRevealCard:hover {
-  background-color: hsl(var(--card)/0.8);
+  background-color: hsl(var(--card) / 0.8);
   --top: -20px !important;
 }
 
@@ -59,4 +61,4 @@
   .cardsContainer {
     perspective: 3000px;
   }
-}/*# sourceMappingURL=cardStackOnly.module.css.map */
+} /*# sourceMappingURL=cardStackOnly.module.css.map */

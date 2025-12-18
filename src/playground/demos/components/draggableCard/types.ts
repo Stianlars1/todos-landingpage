@@ -1,9 +1,10 @@
 import { StatusCode, TodoPriority } from "@/types/taskTypes";
+import { ReactElement, ReactNode } from "react";
 
 export interface RevealCardProps {
   title: string;
   description?: string;
-  content: JSX.Element | null | undefined | string;
+  content: ReactNode | ReactElement | null | undefined | string;
   tags?: string[];
   priority?: TodoPriority;
   todoId: number;

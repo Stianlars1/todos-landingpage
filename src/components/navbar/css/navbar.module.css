@@ -10,12 +10,12 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: hsl(var(--card)/0.5);
+  background-color: hsl(var(--card) / 0.5);
   z-index: 100; /* Higher than the pseudo-element */
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   border-radius: 12px;
-  border: 0.75px solid hsl(var(--foreground)/0.25);
+  border: 0.75px solid hsl(var(--foreground) / 0.25);
   transition: height 0.157s ease-in;
 }
 
@@ -26,9 +26,12 @@
   right: 0;
   left: 0;
   height: 0.5rem; /* Cover only the space from viewport top to navWrapper */
-  background-color: light-dark(hsl(var(--backgorund)/0.1), hsl(var(--card)/0.5));
+  background-color: light-dark(
+    hsl(var(--backgorund) / 0.1),
+    hsl(var(--card) / 0.5)
+  );
   -webkit-backdrop-filter: blur(11px);
-          backdrop-filter: blur(11px);
+  backdrop-filter: blur(11px);
   z-index: 99; /* Ensure it's still behind the navWrapper */
 }
 
@@ -51,20 +54,20 @@
 }
 
 @media screen and (max-width: 600px) {
-  [data-nav-open=true] .navWrapper {
+  [data-nav-open="true"] .navWrapper {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: auto;
     height: calc-size(auto);
-    background-color: hsl(var(--card)/0.8);
+    background-color: hsl(var(--card) / 0.8);
     -webkit-backdrop-filter: blur(24px);
-            backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
   }
 }
 
 @media screen and (max-width: 600px) {
-  [data-nav-open=false] .navWrapper {
+  [data-nav-open="false"] .navWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,4 +102,4 @@
   .navWrapper {
     width: calc(100% - 20px);
   }
-}/*# sourceMappingURL=navbar.module.css.map */
+} /*# sourceMappingURL=navbar.module.css.map */

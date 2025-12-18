@@ -16,7 +16,7 @@ export interface Benefit {
   }: {
     widthHeight?: number | undefined;
     className?: string;
-  }) => JSX.Element;
+  }) => React.ReactElement;
   bulletPoints?: string[];
 }
 

@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal/reveal";
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
 import { BorderBeam } from "@stianlarsen/border-beam";
 import { Meteors } from "@stianlarsen/meteors";
-import { FadedWords } from "@stianlarsen/react-fade-effects";
+import { FadeWords } from "@stianlarsen/react-fade-effects";
 import { Libre_Franklin } from "next/font/google";
 import Image from "next/image";
 import styles from "./css/dashboardShowcase.module.css";
@@ -45,10 +45,10 @@ const DashboardShowcaseHeader = () => {
     <>
       <header className={`${styles.header} ${libre.className}`}>
         <h2 className={styles.title}>
-          <FadedWords variant="up" words={title} />
+          <FadeWords variant="up" words={title} />
         </h2>
         <div className={styles.description}>
-          <FadedWords
+          <FadeWords
             variant="up"
             words={description}
             duration={1}
@@ -80,12 +80,12 @@ const DashboardShowcaseContent = () => {
                 index === 0
                   ? styles.card1
                   : index === 1
-                  ? styles.card2
-                  : index === 2
-                  ? styles.card3
-                  : index === 3
-                  ? styles.card4
-                  : "";
+                    ? styles.card2
+                    : index === 2
+                      ? styles.card3
+                      : index === 3
+                        ? styles.card4
+                        : "";
               const isKeyboard = card.title === SHORTCUTS;
               const isCreateDashboards = card.title === CREATE_DASHBOARDS;
               const isSearch = card.title === SEARCH;

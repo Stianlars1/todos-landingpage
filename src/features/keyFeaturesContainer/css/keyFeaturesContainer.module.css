@@ -9,7 +9,7 @@
 }
 
 .sectionHeader p {
-  color: hsl(var(--foreground)/0.9) !important;
+  color: hsl(var(--foreground) / 0.9) !important;
 }
 
 @media screen and (min-width: 1400px) {
@@ -28,4 +28,4 @@
     opacity: 1;
     visibility: visible;
   }
-}/*# sourceMappingURL=keyFeaturesContainer.module.css.map */
+} /*# sourceMappingURL=keyFeaturesContainer.module.css.map */

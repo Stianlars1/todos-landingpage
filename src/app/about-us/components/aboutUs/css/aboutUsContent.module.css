@@ -44,7 +44,7 @@
   text-decoration: none;
 }
 .aboutUsContent .section .linkHref:visited {
-  color: hsl(var(--foreground)/0.6);
+  color: hsl(var(--foreground) / 0.6);
 }
 .aboutUsContent .section .linkHref:hover {
   text-decoration: underline;
@@ -133,4 +133,4 @@
   .aboutUsContent .taskSection .taskSectionCards > div {
     max-height: 250px;
   }
-}/*# sourceMappingURL=aboutUsContent.module.css.map */
+} /*# sourceMappingURL=aboutUsContent.module.css.map */
