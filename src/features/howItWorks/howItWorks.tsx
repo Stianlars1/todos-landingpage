@@ -83,7 +83,7 @@ const HowItWorksStep = ({
   index: number;
   isMobileSize: boolean;
 }) => {
-  const Icon = step.icon;
+  const IconComponent = step.icon;
   const [rendered, setRendered] = useState(false);
 
   return (
@@ -114,7 +114,7 @@ const HowItWorksStep = ({
               isMobileSize ? styles.isMobile : ""
             }`}
           >
-            {Icon}
+            <IconComponent className="" />
           </span>
         </li>
       </Reveal>

@@ -33,7 +33,7 @@ const nextConfig = {
     viewTransition: true,
   },
   reactCompiler: true,
-  reactStrictMode: true
+  reactStrictMode: true,
 };
 
 export default nextConfig;

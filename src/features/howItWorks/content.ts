@@ -41,6 +41,6 @@ export const howItWorksSteps: HowItWorksStepsType[] = [
     description:
       "Use the Today sidebar icon to quickly access tasks expiring today and update them accordingly.",
     image: undefined,
-    icon: <IconToday className="" />,
+    icon: <IconToday  />,
   },
 ];
