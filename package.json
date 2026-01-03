@@ -16,7 +16,7 @@
     "@formkit/drag-and-drop": "^0.1.6",
     "@stianlarsen/border-beam": "^1.0.11",
     "@stianlarsen/meteors": "^1.0.10",
-    "@stianlarsen/react-fade-effects": "1.0.17",
+    "@stianlarsen/react-fade-effects": "1.1.0",
     "@stianlarsen/react-light-beam": "1.0.12",
     "@stianlarsen/react-ui-kit": "1.1.16",
     "framer-motion": "^11.3.31",
