@@ -1,7 +1,6 @@
 "use client";
 import { useIsDarkmodeActive } from "@/hooks/useIsDarkmode";
 import { APP_URL_LEARN_MORE, APP_URL_SIGNUP } from "@/utils/constants";
-import { BorderBeam } from "@stianlarsen/border-beam";
 
 import { Libre_Franklin } from "next/font/google";
 import Link from "next/link";
@@ -9,7 +8,8 @@ import { useEffect, useState } from "react";
 import { TaskBuddyLandingSVGDark } from "./assets/taskBuddyLandingSVGDark";
 import { TaskBuddyLandingSVGLight } from "./assets/taskBuddyLandingSVGLight";
 import styles from "./css/header.module.css";
-import { FadedWords } from "@stianlarsen/react-fade-effects";
+import { FadeWords } from "@stianlarsen/react-fade-effects";
+import { BorderBeam } from "@stianlarsen/border-beam";
 
 const Libre = Libre_Franklin({ subsets: ["latin"] });
 
@@ -33,7 +33,7 @@ export const Header = () => {
             }`}
           >
             <h1 className={Libre.className}>
-              <FadedWords
+              <FadeWords
                 delay={0}
                 duration={1}
                 variant="up"
@@ -42,7 +42,7 @@ export const Header = () => {
               />
             </h1>
             <div className={`${Libre.className} ${styles.description}`}>
-              <FadedWords
+              <FadeWords
                 delay={500}
                 variant="up"
                 duration={0.5}
