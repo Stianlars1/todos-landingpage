@@ -15,7 +15,7 @@ export const howItWorksSteps: HowItWorksStepsType[] = [
     description:
       "Easily create tasks, assign statuses, and manage them through your personalized dashboard.",
     image: undefined,
-    icon: IconAdd({ className: "" }),
+    icon: <IconAdd className="" />,
 
     // image: "/gifs/how-it-works/create-task.png",
   },
@@ -24,7 +24,7 @@ export const howItWorksSteps: HowItWorksStepsType[] = [
     description:
       "Monitor your progress with real-time updates and achieve your goals efficiently.",
     image: undefined,
-    icon: TaskBuddyIcon({ className: "" }),
+    icon: <TaskBuddyIcon className="" />,
 
     // image: "/gifs/how-it-works/track-progress.png",
   },
@@ -32,7 +32,7 @@ export const howItWorksSteps: HowItWorksStepsType[] = [
     title: "Summary Overview",
     description: "Get a short summarized overview of your tasks.",
     image: undefined,
-    icon: IconShuttle({ className: "" }),
+    icon: <IconShuttle className="" />,
 
     // image: "/gifs/how-it-works/track-progress.png",
   },
@@ -41,6 +41,6 @@ export const howItWorksSteps: HowItWorksStepsType[] = [
     description:
       "Use the Today sidebar icon to quickly access tasks expiring today and update them accordingly.",
     image: undefined,
-    icon: IconToday({ className: "" }),
+    icon: <IconToday className="" />,
   },
 ];
