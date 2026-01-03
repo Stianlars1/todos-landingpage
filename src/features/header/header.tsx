@@ -18,6 +18,7 @@ export const Header = () => {
   const { isDarkmodeActive } = useIsDarkmodeActive();
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     setTimeout(() => {
       setImageLoaded(true);
     }, 5);
@@ -48,8 +49,7 @@ export const Header = () => {
                 duration={0.5}
                 staggerTime={0.025}
                 scaleSize={1.1}
-                words="Streamline your workflow, boost productivity, and achieve your
-              goals with TaskBuddy - the ultimate task management app."
+                words="Streamline your workflow, boost productivity, and achieve your goals with TaskBuddy - the ultimate task management app."
               />
             </div>
           </div>

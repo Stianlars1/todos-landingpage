@@ -1,4 +1,4 @@
-import { CSSProperties, SVGProps } from "react";
+import { CSSProperties, ReactElement, SVGProps } from "react";
 
 export const IconDashboard = ({ className = " " }: { className?: string }) => {
   return (
@@ -305,7 +305,11 @@ export const IconCalender = ({ className = " " }: { className?: string }) => {
     </svg>
   );
 };
-export const IconAdd = ({ className }: { className?: string }) => {
+export const IconAdd = ({
+  className,
+}: {
+  className?: string;
+}): ReactElement => {
   return (
     <svg
       className={`customIcon ${className ?? ""}`}
